@@ -1,0 +1,9 @@
+config.php
+tmp/
+GeoIP.dat
+*.log
+
+*.bak
+*~
+
+inffo.php

@@ -1,0 +1,40 @@
+/* =========================
+   EVAi · Tema Amarillo 
+   ========================= */
+
+:root{
+  /* Header */
+  --topfondo: linear-gradient(135deg, #5a5a2e 0%, #b7b75e 100%);
+  --toptexto: #ffffff;
+  --toplink: #ffffff;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* Página */
+  --bodyfondo: #ffffcc;   /* amarillo muy claro */
+  --bodytexto: #3a3a2a;   /* gris oscuro legible */
+
+  /* Links */
+  --bodylink: #7a7a2a;
+  --bodylinkover: #5c5c1d;
+
+  /* Cajas */
+  --caja-bg: #ffffff;
+  --caja-head-bg: #e2e2b5;   /* un poco más oscuro que el body */
+  --caja-head-tx: #3a3a2a;
+
+  /* Tablas */
+  --th: #f5f5d6;
+  --tr: #ffffff;
+  --trover: #fafae2;
+  --tableborder: #d4d4aa;
+
+  /* Botones */
+  --submifondo: #b7b75e;
+  --submitexto: #ffffff;
+  --csubmiover: #8f8f48;
+  
+  --icono-color: #b7b75e;   /* amarillo oliva suave */
+
+}
+

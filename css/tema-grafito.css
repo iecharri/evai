@@ -1,0 +1,25 @@
+:root{
+  /* Header y texto */
+  --topfondo: linear-gradient(135deg,#374151,#111827);
+  --toptexto:#e5e7eb; --toplink:#cbd5e1; --toplinkover:#ffffff; --toplinkactivo:#ffffff;
+
+  /* Página */
+  --bodyfondo:#0f172a; --bodytexto:#e5e7eb;
+
+  /* Links */
+  --bodylink:#60a5fa;  --bodylinkover:#93c5fd;
+
+  /* Cajas (oscuras) */
+  --caja-bg:#111827;
+  --caja-head-bg:#1f2937;
+  --caja-head-tx:#e5e7eb;
+
+  /* Tablas */
+  --th:#1f2937; --tr:#111827; --trover:#0b1220; --tableborder:#374151;
+
+  /* Botones (azul para contraste) */
+  --submifondo:#2563eb; --submitexto:#ffffff; --csubmiover:#1d4ed8;
+
+  /* Iconos / acentos */
+  --icono-color:#9ca3af;
+}

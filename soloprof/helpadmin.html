@@ -1,0 +1,30 @@
+<div class='peq'>
+
+<b><center>Autorizaciones según IP de conexión y nombre de usuario conectado.</center></b>
+<p><br><p>
+- Hay dos tablas que controlan el nivel de acceso general: usuarios y maquinas. Estas son manejadas por usuarios administradores.<p>
+Hay 6 niveles:
+<p>
+<B>Autorización = 10</B> Administrador: usuario plenamente autorizado desde cualquier IP y además tiene <FONT COLOR="#339900"><b>opciones de administración</b></FONT>.<p>
+<B>Autorización = 5</B> Usuario plenamente autorizado <FONT COLOR="#339900"><B>desde cualquier IP</B></FONT> y con opciones de administración de su asignatura. Nivel típico de profesores.<p>
+<B>Autorización = 4</B> Usuario plenamente autorizado: (opción típica de un alumno o de un usuario externo)<p>
+<B>Autorización = 3</B> Usuario a la espera de introducir clave enviada por mail o usuario bloqueado por no haberse validado en una semana o porque el profesor lo decide.<p>
+[ Los valores de Autorización <b><font color=#ff0000>3</font></b> en rojo indican que ese usuario está bloqueado (por no haber validado su cuenta en siete días o porque lo decide el profesor, sin posibilidad de conectarse). Sus vínculos y su cuenta quedan retenidos hasta que el Profesor decida autorizarlo o borrarlo (pasando sus vínculos y votos a ser "propiedad" del usuario "evai"). Queda la opción, por parte del Profesor, de sustituir el valor de 3 por el de 4 y así autorizar indefinidamente al usuario. ]<p>
+<B>Autorización = 2</B> Usuario no autorizado a ver apuntes ni a votar.<p>
+<B>Autorización = 1</B> Usuario no autorizado a nada. (Salvo en la tabla máquinas, en la que un valor de 0 no indica no autorización)<p>
+<B>Autorización = 0</B> Profesor o Alumno pendiente de validación.<p>
+El valor de <B>"Autorización"</B> de un <B>usuario</B> en cuestión que accede desde una <B>máquina</B> dada lo determina en primer lugar el valor del campo "autorizado" dela tabla Usuarios. Si este valor es de <B>5</B> entonces va a poder acceder a todas las opciones independientemente de la IP de la máquina. Un valor de 10 además da al usuario opciones de adminsitración. Es el valor que debe de tener los <B>Administradores</B> de Evai.
+<p>
+Para cualquier otro valor del campo "autorizado" de la tabla Usuarios lo que determinará el nivel de acceso desde esa máquina es el valor del campo "autorizado" de la tabla Máquinas. Así si se veta a una IP el acceso a cualquier usuario, basta con poner a "1" el valor de "autorizado" en la tabla "Máquinas".
+<p>
+<B>Un valor del campo "autorizado" de "5" en la tabla Usuarios indica que los valores de la tabla Máquinas son irrelevantes para ese usuario y se podrá conectar desde cualquier máquina.
+</B><p>
+<B>Un valor del campo "autorizado" de "0" en la tabla Máquinas indica que será el fichero Usuarios el que controlará el acceso a Evai</B>.
+<p>
+<B>Un valor del campo "autorizado" de "2" en la tabla Máquinas indica que a no ser que el usuario que se conecte tenga el valor de "5" en la tabla usuarios, cualquier usuario que se conecte desde esa máquina no podá ni votar ni ver los apuntes de internet.
+</B>
+<p><hr><p>
+Cuando un usuario se conecta se lanza el saludo y aviso asociado a la IP desde donde se conecta.<p>
+Una vez que se conecta un usuario aparece el mensaje asociado al usuario en particular. Es modificable por cualquier profesor de sus asignaturas.</BODY>
+
+</div>

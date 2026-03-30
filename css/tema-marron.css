@@ -1,0 +1,38 @@
+/* =========================
+   EVAi · Tema Marrón
+   ========================= */
+
+:root{
+  /* Header */
+  --topfondo: linear-gradient(135deg, #5c3a21 0%, #b08968 100%);
+  --toptexto: #ffffff;
+  --toplink: #fff5ee;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* Página */
+  --bodyfondo: #f5efe9;   /* beige claro */
+  --bodytexto: #2e1e10;   /* marrón oscuro legible */
+
+  /* Links */
+  --bodylink: #8b5e3c;
+  --bodylinkover: #6d482d;
+
+  /* Cajas */
+  --caja-bg: #ffffff;
+  --caja-head-bg: #e2d5cc;  /* un poco más oscuro que el body */
+  --caja-head-tx: #2e1e10;
+
+  /* Tablas */
+  --th: #f5ede7;
+  --tr: #ffffff;
+  --trover: #f9f3ef;
+  --tableborder: #d6c2b6;
+
+  /* Botones */
+  --submifondo: #8b5e3c;
+  --submitexto: #ffffff;
+  --csubmiover: #6d482d;
+
+  --icono-color: #8b5e3c;   /* marrón principal */
+}

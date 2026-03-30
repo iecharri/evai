@@ -1,0 +1,40 @@
+/* =========================
+   EVAi · Tema Azul
+   ========================= */
+
+:root{
+  /* Header */
+  --topfondo: linear-gradient(135deg, #3a6fd8 0%, #66c0e3 100%);
+  --toptexto: #ffffff;
+  --toplink: #eaf3ff;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* Página */
+  --bodyfondo: #e6eef7;   /* azul muy claro de atmósfera */
+  --bodytexto: #0f2940;   /* azul marino legible */
+
+  /* Links */
+  --bodylink: #2d6cdf;
+  --bodylinkover: #1b4fbf;
+
+  /* Cajas: blancas y cabecera un pelín más oscura */
+  --caja-bg: #ffffff;
+  --caja-head-bg: #cbd5e1; 
+  --caja-head-tx: #0f2940;
+
+  /* Tablas */
+  --th: #eaf1fb;
+  --tr: #ffffff;
+  --trover: #f3f7fd;
+  --tableborder: #cbd5e1;
+
+  /* Botones */
+  --submifondo: #3a6fd8;
+  --submitexto: #ffffff;
+  --csubmiover: #2f59b9;
+  
+  --icono-color: #4facfe;   /* azul principal del degradado */
+  
+}
+

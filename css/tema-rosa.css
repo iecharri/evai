@@ -1,0 +1,15 @@
+:root{
+  --topfondo: linear-gradient(135deg,#ec4899,#f472b6);
+  --toptexto:#4a044e; --toplink:#fdf2f8; --toplinkover:#ffffff; --toplinkactivo:#ffffff;
+
+  --bodyfondo:#fdf2f8; --bodytexto:#831843;
+  --bodylink:#db2777;  --bodylinkover:#be185d;
+
+  --caja-bg:#ffffff; --caja-head-bg:#fce7f3; --caja-head-tx:#831843;
+
+  --th:#fce7f3; --tr:#ffffff; --trover:#fdf2f8; --tableborder:#f9a8d4;
+
+  --submifondo:#db2777; --submitexto:#ffffff; --csubmiover:#be185d;
+
+  --icono-color:#f9a8d4;
+}

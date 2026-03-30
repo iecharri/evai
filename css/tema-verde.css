@@ -1,0 +1,38 @@
+/* =========================
+   EVAi · Tema Verde
+   ========================= */
+
+:root{
+  /* Header */
+  --topfondo: linear-gradient(135deg, #2d7a3a 0%, #66cc88 100%);
+  --toptexto: #ffffff;
+  --toplink: #eafff2;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* Página */
+  --bodyfondo: #e6f4ec;   /* verde muy claro */
+  --bodytexto: #0f2a1c;   /* verde oscuro legible */
+
+  /* Links */
+  --bodylink: #2d8c4a;
+  --bodylinkover: #1f6636;
+
+  /* Cajas */
+  --caja-bg: #ffffff;
+  --caja-head-bg: #cce3d4;  /* un poco más oscuro que el body */
+  --caja-head-tx: #0f2a1c;
+
+  /* Tablas */
+  --th: #eaf7ef;
+  --tr: #ffffff;
+  --trover: #f3fbf6;
+  --tableborder: #b5d9c1;
+
+  /* Botones */
+  --submifondo: #2d8c4a;
+  --submitexto: #ffffff;
+  --csubmiover: #236d39;
+
+  --icono-color: #2d8c4a;   /* verde principal */
+}

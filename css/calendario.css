@@ -1,0 +1,51 @@
+.cajadiared, .calend .cajadiared {background:#cc0000;color:#ffffff;font-weight:bold}
+.cajadiayel, .calend .cajadiayel {background:#FFdd00;color:#ffffff;font-weight:bold}
+.cajadianar, .calend .cajadianar {background:#ff9900;color:#ffffff;font-weight:bold}
+#calendariop .finde, #calendario .finde {background:#6f6f6f;color:#fff}
+
+#calendariop th {background:#fefefe;border:none}
+#calendariop td {text-align:center;}
+#calendario th {padding:1em;}
+#calendario td {height:5em;vertical-align:top;padding:0em;width:14%} 
+
+
+#calendario .dh,#calendariop .dh {font-weight:bold;border:3px solid black;}
+
+#calendariop .finde, #calendario .finde {
+  background: var(--topfondo) !important;
+  color: #fff !important;
+}
+
+/* Bordes redondeados en las celdas */
+#calendariop td,
+#calendario  td{
+  border-radius: 12px;       /* ajusta a 16px si los quieres aún más redondos */
+  overflow: hidden;          /* asegura que el fondo siga el radio */
+  background-clip: padding-box;
+}
+
+/* “Hoy” con el mismo radio (por si la clase va en el TD) */
+#calendariop td.dh,
+#calendario  td.dh,
+#calendariop .dh,
+#calendario  .dh{
+  border-radius: 12px;
+}
+#calendariop,
+#calendario{
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.mini-cal{
+  width: clamp(220px, 28vw, 300px); /* estrecho y adaptable */
+  margin-left: auto;                /* lo empuja a la derecha */
+}
+
+.mini-chip{ display:inline-flex; align-items:center; gap:.35rem; font-size:.78rem; color:#50606a; }
+.mini-dot{  width:.75rem; height:.75rem; border-radius:50%;  display:inline-block; border:1px solid rgba(0,0,0,.12);}
+
+/* Reusa tus clases existentes para colorear el punto */
+.mini-dot.cajadiayel{ background: #f8d54b; }
+.mini-dot.cajadiared{ background: #ef6b6b; }
+

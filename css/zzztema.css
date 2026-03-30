@@ -1,0 +1,208 @@
+/* =========================
+   Base de tema común EVAi
+   (estructura, tamaños y componentes; colores via variables)
+   ========================= */
+
+/* Variables base (fallback por si falta un tema de color) */
+:root {
+  --header-h: 60px;
+  --container-bg: var(--bodyfondo, #ffffff);
+
+  /* Si un tema no define algo, caemos a valores neutros accesibles */
+  --topfondo: var(--topfondo, linear-gradient(135deg,#4f46e5,#06b6d4));
+  --toptexto: var(--toptexto, #ffffff);
+  --toplink: var(--toplink, #eaf3ff);
+  --toplinkover: var(--toplinkover, #ffffff);
+  --toplinkactivo: var(--toplinkactivo, #ffffff);
+
+  --bodyfondo: var(--bodyfondo, #eef2f7);
+  --bodytexto: var(--bodytexto, #0f172a);
+  --bodylink: var(--bodylink, #2563eb);
+  --bodylinkover: var(--bodylinkover, #1e40af);
+
+  --submifondo: var(--submifondo, #2563eb);
+  --submitexto: var(--submitexto, #ffffff);
+  --csubmiover: var(--csubmiover, #1e40af);
+
+  --th: var(--th, #eff6ff);
+  --tr: var(--tr, #ffffff);
+  --trover: var(--trover, #f8fafc);
+  --tableborder: var(--tableborder, #cbd5e1);
+
+  /* Derivadas para cajas */
+  --caja-bg: var(--container-bg);
+  --caja-head-bg: var(--submifondo);
+  --caja-head-tx: #ffffff;
+  --caja-borde: var(--tableborder);
+
+  /* Ritmo y radios */
+  --radius: 12px;
+  --radius-xl: 16px;
+  --gap-2: 12px;
+  --gap-3: 16px;
+
+  --min-caja-h: 180px;
+
+}
+
+/* ===== Global (mantiene tus selectores actuales) ===== */
+html, body { background: var(--bodyfondo); color: var(--bodytexto); }
+a { color: var(--bodylink); text-decoration: none; }
+a:hover { color: var(--bodylinkover); text-decoration: underline; }
+
+/* Header (mantén #top y #toppanel como ya usas) */
+#top, #toppanel, .evai-header {
+  background: var(--topfondo);
+  color: var(--toptexto);
+}
+#top a, .evai-header a { color: var(--toplink); }
+#top a:hover, .evai-header a:hover { color: var(--toplinkover); text-decoration: none; }
+#top a.active, .evai-header a.activo { color: var(--toplinkactivo); }
+
+/* Contenedor principal (ya lo usas en estilo.css) */
+#container{
+  background: transparent /*var(--container-bg);*/
+  min-height: calc(100vh - var(--header-h));
+}
+
+/* Contenedor 3 columnas auto-responsive SIN media queries */
+.layout-3col {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: stretch;
+}
+
+.col-multi {
+  display: grid;
+  gap: 16px;            /* separación vertical entre cajas */
+  grid-auto-rows: auto; /* cada caja mide lo que necesita */
+  align-self: start;    /* no se estira a igualar la altura */
+  align-content: start; /* no reparte espacio sobrante */
+}
+
+.col-multi .caja { min-height: 0; margin: 0; }
+
+/* ===== Tablas (mantiene tu estructura actual) ===== */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color: var(--tr);
+  border: 1px solid var(--tableborder);
+}
+th, th a { color: var(--trover); background-color: var(--th); }
+td, th { border: 1px solid var(--tableborder); }
+table.conhover tr:hover td { background-color: var(--trover); }
+
+/* ===== Botones submit (mantiene tus inputs) ===== */
+input[type=submit], input[type=reset], input[type=button],
+button[type=submit], .btn-submit {
+  background: var(--submifondo);
+  color: var(--submitexto);
+  border: solid var(--submifondo) 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+button[type=submit]:hover, .btn-submit:hover {
+  background: var(--csubmiover);
+}
+
+/* ===== Cajas flex (nuevas) ===== */
+.grid-cajas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap-3);
+  align-items: stretch;
+}
+
+.caja {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-caja-h);
+  background: var(--caja-bg);
+  border: 1px solid var(--caja-borde);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.caja--compacta {
+  min-height: 0;
+}
+.caja:hover { box-shadow: 0 8px 20px rgba(0,0,0,.12); transform: translateY(-1px); }
+
+.caja__head {
+  padding: 12px 16px;
+  background: var(--caja-head-bg);
+  color: var(--caja-head-tx);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Links dentro de la cabecera de caja */
+
+
+.caja__head a,
+.caja__head a:visited {
+  color: var(--caja-head-tx);
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.caja__head a:hover {
+  color: var(--caja-head-tx);
+  text-decoration: underline;
+}
+
+.caja__body { flex: 1 1 auto; padding: 14px 16px; color: var(--bodytexto); background: var(--caja-bg); }
+.caja__foot {
+  padding: 12px 16px;
+  background: color-mix(in srgb, var(--caja-bg) 92%, #000 0%);
+  border-top: 1px solid var(--caja-borde);
+  display: flex; gap: var(--gap-2); align-items: center; justify-content: flex-end;
+}
+.caja a { color: var(--bodylink); border-bottom: 1px dotted transparent; }
+.caja a:hover { color: var(--bodylinkover); border-bottom-color: currentColor; }
+
+/* Variante: caja completa en color del tema */
+.caja--tema {
+  background: var(--submifondo);
+  color: #fff;
+  border-color: transparent;
+}
+.caja--tema .caja__head { background: transparent; color: #fff; }
+.caja--tema .caja__body { background: transparent; color: #fff; }
+.caja--tema .caja__foot { background: rgba(255,255,255,.08); border-top-color: rgba(255,255,255,.15); }
+.caja--tema a { color: #fff; text-decoration: underline; }
+
+/* ===== Compatibilidad con tus clases históricas ===== */
+/* Mantén tus “colu” como contenedores clásicos */
+.colu { background: var(--container-bg); padding: .7em; border: 1px solid var(--th); }
+.colu1 { background: var(--th); color: var(--trover); }
+.colu1 a { color: var(--trover); }
+.colu2 { border-left: 3px solid #666; background: #e5e5e5; padding: .7em; }
+
+/* Caja 2 (la mantienes, pero ahora hereda paleta) */
+.caja2 { background: #E3DCD9; color: #fff; text-align: center; }
+
+/* Utilidades de altura para cajas nuevas */
+.h-200 { min-height: 200px; }
+.h-260 { min-height: 260px; }
+.h-320 { min-height: 320px; }
+
+/* Navegación simple (respetando tu #navhsimple) */
+#navhsimple { list-style: none; margin: 0; padding: 0; overflow: hidden; background: var(--topfondo); width: 100%; font-size: .8em; }
+#navhsimple li { float: left; border-right: 1px solid #bbb; }
+#navhsimple li a { display: block; color: var(--toptexto); text-align: center; padding: 6px 10px; text-decoration: none; }
+#navhsimple li a:hover { background: rgba(0,0,0,.15); }
+
+/* 1) Que las columnas NO se estiren a la altura máxima */
+/*.layout-3col { align-items: start; }*/
+
+
+/* Si la página se está usando como embed, fondo transparente */
+body.embed, #container.embed {
+  background: var(--caja-bg, #fff) !important;
+}

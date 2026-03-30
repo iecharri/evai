@@ -1,0 +1,713 @@
+/* =========================
+   EVAi · Base neutra (no depende de colores)
+   - Define variables por defecto
+   - Aplica variables en los componentes
+   ========================= */
+
+:root {
+  /* Layout */
+  --header-h: 60px;
+  --radius: 12px;
+  --radius-xl: 16px;
+  --gap-2: 12px;
+  --gap-3: 16px;
+  --min-caja-h: 180px;
+
+  /* Paleta neutra por defecto (se pisa en el tema de color) */
+  --topfondo: linear-gradient(135deg,#4f46e5,#06b6d4);
+  --toptexto: #ffffff;
+  --toplink: #eaf3ff;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  --bodyfondo: #f8fafc;      /* fondo general muy claro */
+  --bodytexto: #0f172a;      /* texto casi negro legible */
+
+  --bodylink: #2563eb;
+  --bodylinkover: #1e40af;
+
+  /* Cajas */
+  --caja-bg: #ffffff;        /* cuerpo de la caja */
+  --caja-head-tx: #0f172a;   /* texto cabecera */
+
+  /* Cabecera de caja = un pelín más oscura que la caja */
+  --caja-head-bg: #f1f5f9;   /* fallback por si no hay color-mix */
+
+  /* Tablas */
+  --th: #eef2f7;
+  --tr: #ffffff;
+  --trover: #f8fafc;
+  --tableborder: #cbd5e1;
+
+  /* Botones submit */
+  --submifondo: #2563eb;
+  --submitexto: #ffffff;
+  --csubmiover: #1e40af;
+}
+
+/* Si el navegador soporta color-mix, oscurecemos dinámicamente la cabecera
+   respecto al fondo real de la caja (más elegante y adaptable). */
+@supports (background: color-mix(in srgb, white, black)) {
+  :root {
+    --caja-head-bg: color-mix(in srgb, var(--caja-bg) 92%, #000 8%);
+  }
+}
+
+/* ===== Global ===== */
+html, body {
+  margin: 0;
+  background: var(--bodyfondo);
+  color: var(--bodytexto);
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.login-card {
+  margin: 0 auto 1.2rem;
+  max-width: 380px;
+  background: var(--container-bg, #ffffff);
+  border: 1px solid var(--tableborder, #e5e7eb);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  padding: 1.2rem 1.4rem;
+  color: var(--bodytexto, #0f172a);
+}
+
+.login-card::before {
+  content: "";
+  display: block;
+  height: 6px;
+  border-radius: 14px 14px 0 0;
+  background: var(--topfondo, #4facfe);
+  margin: -1.2rem -1.4rem 1rem -1.4rem; /* sobresale del padding */
+}
+
+a { color: var(--bodylink); text-decoration: none; }
+a:hover { color: var(--bodylinkover); text-decoration: underline; }
+
+/* Header (opcional) */
+#top, #toppanel, .evai-header {
+  background: var(--topfondo);
+  color: var(--toptexto);
+}
+#top a, .evai-header a { color: var(--toplink); }
+#top a:hover, .evai-header a:hover { color: var(--toplinkover); text-decoration: none; }
+#top a.active, .evai-header a.activo { color: var(--toplinkactivo); }
+
+/* Contenedor principal:
+   - fondo transparente para que se vea el body
+   - altura mínima = viewport - header */
+#container {
+  background: transparent;
+  min-height: calc(100vh - var(--header-h));
+}
+
+/* Grid 3 columnas auto (sin media queries) */
+.layout-3col {
+  display: grid;
+  gap: var(--gap-3);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+}
+.col-multi {
+  display: grid;
+  gap: var(--gap-3);
+  grid-auto-rows: auto;
+  align-content: start;
+}
+
+/* Cajas */
+.caja {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--min-caja-h);
+  background: var(--caja-bg);
+  border: 1px solid var(--tableborder);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.caja:hover { box-shadow: 0 8px 20px rgba(0,0,0,.12); transform: translateY(-1px); }
+
+.caja__head {
+  padding: 12px 16px;
+  background: var(--caja-head-bg);
+  color: var(--caja-head-tx);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.caja__head {
+  padding: 4px 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 0.95rem;
+}
+
+
+.caja--texto { display:block; } /* esta caja NO es flex: flujo inline normal */
+.caja__body { flex: 1 1 auto; padding: 14px 8px; color: var(--bodytexto); background: var(--caja-bg); }
+.caja__foot {
+  padding: 12px 16px;
+  background: color-mix(in srgb, var(--caja-bg) 96%, #000 4%);
+  border-top: 1px solid var(--tableborder);
+  display: flex; gap: var(--gap-2); align-items: center; justify-content: flex-end;
+}
+
+.caja--estrecha {
+  max-width: 600px;   /* o el ancho que prefieras */
+  margin: 0 auto;     /* centrada horizontalmente */
+}
+
+/* Tablas (discretas) */
+table { width: 100%; border-collapse: collapse; background: var(--tr); border: 1px solid var(--tableborder); }
+th, td { padding: .7rem; border: 1px solid var(--tableborder); }
+th { background: var(--th); text-align: left; }
+table.conhover tr:hover td { background: var(--trover); }
+
+/* Botones submit */
+input[type=submit], input[type=reset], input[type=button],
+
+button[type=submit], .btn-submit {
+  background: var(--submifondo);
+  color: var(--submitexto);
+  border: 2px solid var(--submifondo);
+  border-radius: 8px;
+  padding: .5rem .9rem;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+
+button[type=submit]:hover, .btn-submit:hover {
+  background: var(--csubmiover);
+}
+
+.btn {
+  display: inline-block;             /* vale para <a> y <button> */
+  background: var(--topfondo, #4facfe);
+  color: var(--toptexto, #fff);
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;             /* quita subrayado en <a> */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+
+/* Utilidades */
+.caja--compacta { min-height: 0; }
+
+/* Embeds: fondo blanco aunque el bodyfondo sea de color */
+body.embed,
+body.embed #container {
+  background: #ffffff !important;
+}
+
+/* ===== NAV SIMPLE FLEX CENTRADO (id: navhsimple) ===== */
+#navhsimple {
+  display: flex;
+  justify-content: left;      /* <--- centrado horizontal */
+  flex-wrap: wrap;              /* si no caben, bajan de línea */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--topfondo);  /* usa el degradado/color del tema */
+  width: 100%;
+  font-size: .7em;
+}
+
+#navhsimple li {
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid rgba(255,255,255,.3);
+}
+
+#navhsimple li:last-child {
+  border-right: none;
+}
+
+#navhsimple li a {
+  display: block;
+  padding: 5px 10px;
+  color: var(--toptexto);
+  text-align: center;
+  text-decoration: none;
+}
+
+#navhsimple li a:hover:not(.active) {
+  background-color: rgba(0,0,0,.2);
+}
+
+#navhsimple li a.active,
+#navhsimple #active {
+  background-color: rgba(0,0,0,.35);
+  color: var(--toplinkactivo);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (min-width:730px) {
+  #navhsimple { font-size: .8em; }
+}
+
+@media screen and (min-width:900px) {
+  #navhsimple { font-size: .9em; }
+  #navhsimple li a { padding: 14px 16px; }
+}
+
+.laterall a:hover, #divficha a:hover{ background:var(--topfondo);}
+.laterall a.active, #divficha a.active  {background:var(--topfondo);color:var(--toplink);}
+
+:root.embed {
+  --bodyfondo: #fff;
+  --container-bg: #fff;
+}
+html.embed, html.embed body, html.embed #container {
+  background: #fff !important;
+}
+
+a {
+  display: inline;
+}
+
+.perfil-foto {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+	margin: 0 auto;   /* centra horizontalmente */
+  display: block;   /* asegura que respete el auto */
+}
+
+.foto-r {
+  border-radius: 50%;
+}
+
+.foto-c {
+  border-radius: 8px;  /* o 0 si quieres ángulo recto total */
+}
+
+/* Cabecera mini-chat */
+.chatmini {
+  padding: 6px 10px;
+  background: var(--topfondo, #643B2C);
+  color: var(--toptexto, #fff);
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Contenedor principal (mensajes + usuarios) */
+.chat-container {
+  display: flex;
+  height: 76%;
+  border: 1px solid #643B2C;
+  border-top: none;
+}
+
+/* Zona de mensajes */
+.chat-mensajes {
+  flex: 0 0 69%;
+  overflow-y: auto;
+  padding: 8px;
+  border-right: 1px solid #643B2C;
+}
+
+/* Lista de usuarios */
+.chat-usuarios {
+  flex: 0 0 30%;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.chat-form {
+  border-top: none;
+  height: 40px;       /* alto fijo del área de escribir */
+  padding: 0;         /* sin relleno extra */
+}
+
+.chat-form form {
+  height: 100%;
+}
+
+.chat-form input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 10px;     /* aire solo a los lados */
+  margin: 0;           /* sin margen raro */
+  background: #fff;
+  font-size: 1em;
+}
+
+.galeria { display:flex; flex-direction:column; align-items:center; gap:14px; }
+.galeria-item { width:100%; max-width:480px; margin:0 auto; }
+.galeria-item video, .galeria-item iframe { width:100%; height:auto; border:1px solid #ccc; border-radius:8px; box-sizing:border-box; }
+.galeria-item video { max-height:300px; object-fit:cover; }
+.galeria-item iframe { aspect-ratio:16/9; max-height:300px; }
+.galeria-item {display: block;margin: 0.5em auto;max-width: 60%;height: auto;border-radius: 8px;box-shadow: 0 2px 6px rgba(0,0,0,0.15);}
+video.galeria-item {width: 60%;height: auto;}
+/* --- fotos de usuario / avatares --- */
+
+/* base */
+.imagen {
+  object-fit: cover;
+  display: inline-block;
+  border: 2px solid #fff;
+  margin: 8px;
+  vertical-align: middle;
+}
+
+/* tamaños */
+.imagen.peq    { width: 40px;  height: 40px; }
+.imagen.med    { width: 80px;  height: 80px; }
+.imagen.grande { width: 96px;  height: 96px; }
+
+/* forma */
+.imagen.foto-r { border-radius: 50%; }
+.imagen.foto-c { border-radius: 8px; }
+
+/* estados */
+.imagen.on1 {
+  box-shadow: 0 0 0 4px var(--icono-color),
+              0 0 20px 8px var(--icono-color);
+  opacity: 1;
+}
+
+.imagen.on0 {
+  box-shadow: none;
+  opacity: 0.7;
+  filter: grayscale(100%);
+}
+
+/* excepción: cabecera (sin halo) */
+.imagen.sin-halo {
+  box-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
+/* Fila: foto arriba y sin huecos raros */
+.fila-usuario{
+  display:flex;
+  align-items:flex-start;   /* la foto no se estira */
+  margin:0.5em 16px;
+}
+
+.fila-usuario .foto{
+  flex: 0 0 auto;
+  display: flex;           /* apila verticalmente lo que metas dentro */
+  flex-direction: column;
+  align-items: center;     /* centra foto + extras */
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  margin-right: 1em;
+  gap: 0.25em;             /* 👈 separa foto y lo de debajo */
+  line-height: normal;     /* 👈 importante: NO 0 en el contenedor */
+}
+
+/* La imagen como bloque, sin margen extra dentro de la fila */
+.fila-usuario .imagen{
+  display: block;
+  margin: 0;
+  line-height: 0;          /* 👈 aquí sí, solo para la propia img */
+}
+
+/* El texto ocupa el resto, sin desbordes raros */
+.fila-usuario .datos{
+  flex:1;
+  min-width:0;
+}
+
+/* --- bloque usuario (foto + datos) --- */
+.fila-usuario {
+  /* sin ancho fijo; el contenedor decide la disposición */
+  display: flex;
+  align-items: flex-start;
+}
+
+/* sub-bloques ya afinados */
+.fila-usuario .foto {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  margin-right: 0.75em; /* aire a la derecha */
+  gap: 0.25em;
+  line-height: normal;
+}
+
+.fila-usuario .imagen { display:block; margin:0; line-height:0; }
+.fila-usuario .datos  { flex: 1; min-width: 0; }
+
+/* ===========================
+   MODO 1: horizontal con wrap
+   =========================== */
+.usuarios--fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em 1em;              /* separación entre tarjetas */
+}
+.usuarios--fila .fila-usuario {
+  display: inline-flex;         /* compacto */
+  align-items: flex-start;
+  /* ancho auto: cada bloque ocupa lo que necesite */
+}
+
+/* ===========================
+   MODO 2: lista vertical
+   =========================== */
+.usuarios--lista {
+  display: block;
+}
+.usuarios--lista .fila-usuario {
+  display: flex;                /* ocupa todo el ancho del contenedor */
+  padding: 0.4em 0;
+  border-bottom: 1px solid rgba(0,0,0,.06); /* opcional separador */
+}
+.usuarios--lista .fila-usuario:last-child {
+  border-bottom: none;
+}
+
+
+/* ======================
+   1. HORIZONTAL CUADRADO
+   ====================== */
+.usuarios--fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.usuarios--fila .fila-usuario {
+  display: flex;
+  flex-direction: column;  /* foto arriba, texto debajo */
+  align-items: center;
+  justify-content: flex-start;
+  width: 10em;
+  height: 11em;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+.usuarios--fila .fila-usuario .foto {
+  margin-bottom: 0.4em;
+}
+
+.usuarios--fila .fila-usuario .datos {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==================
+   2. SOLO FOTOS EN FILA
+   ================== */
+.usuarios--fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.usuarios--fotos .imagen {
+  margin: 0;
+}
+
+/* ==================
+   3. LISTA VERTICAL
+   ================== */
+.usuarios--lista {
+  display: block;
+}
+
+.usuarios--lista .fila-usuario {
+  display: flex;                /* foto a la izquierda, texto a la derecha */
+  align-items: flex-start;
+  margin: 0.5em 0;
+  padding: 0.4em 0;
+  border-bottom: 1px solid rgba(0,0,0,.06); /* separador opcional */
+}
+
+.usuarios--lista .fila-usuario:last-child {
+  border-bottom: none;
+}
+
+.usuarios--lista .foto {
+  margin-right: 0.75em;
+}
+
+.usuarios--lista .datos {
+  flex: 1;
+}
+
+/* ======================
+   Ajuste global inputs
+   ====================== */
+
+/* Por defecto: los inputs no se estiran a todo el ancho */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number] {
+  width: auto;        /* se ajustan a su contenido o atributo size */
+  max-width: 100%;    /* pero nunca desbordan su contenedor */
+}
+
+/* Si en algún caso quieres un campo ancho al 100%, usa esta clase */
+.campo-full {
+  width: 100% !important;
+  box-sizing: border-box; /* incluye padding/border en el 100% */
+}
+
+.bloque-subida {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  align-items: center;
+}
+
+.boton-subida {
+  display: inline-block;
+  background: #f4f7fb;
+  border: 1px solid #a7bddf;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: .9em;
+  color: #333;
+  transition: background .2s;
+}
+
+.boton-subida:hover {
+  background: #e1ecff;
+}
+
+.boton-subida.video {
+  background: #f6faff;
+  border-color: #88a4cf;
+}
+
+.boton-subida input[type=file] {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== BLOQUE LOGIN CENTRADO Y RESPONSIVE ====== */
+
+.login-wrap {
+  display: flex;
+  justify-content: center;      /* centra horizontalmente */
+  align-items: center;          /* centra verticalmente la derecha respecto a la izquierda */
+  gap: 28px;                    /* espacio horizontal entre columnas */
+  max-width: 980px;             /* evita que se abran en pantallas grandes */
+  padding: 12px;
+  margin: 0 auto;
+}
+
+/* Anula floats si existen */
+.login-wrap .fl { float: none !important; }
+
+/* Columna izquierda (formulario) */
+.login-left {
+  flex: 1 1 520px;              /* crece/encoge según espacio */
+  min-width: 360px;
+}
+
+/* Columna derecha (logo + título) */
+.login-right {
+  flex: 0 0 400px;              /* 🔸 mantiene el logo ancho, no se encoge fácilmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Imagen del logo */
+.logo-evai {
+  width: 400px;                 /* 🔸 tamaño estable en escritorio */
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin-top: 0;
+}
+
+/* ====== AJUSTES CUANDO SE REDUCE EL ANCHO ====== */
+@media (max-width: 1080px) {
+  .login-right {
+    flex: 0 0 360px;            /* 🔹 baja un poco el mínimo */
+  }
+  .logo-evai {
+    width: 360px;
+  }
+}
+
+/* ====== MODO APILADO (LOGO DEBAJO) ====== */
+@media (max-width: 900px) {
+  .login-wrap {
+    flex-direction: column;     /* apila: formulario arriba, logo abajo */
+    align-items: center;
+    gap: 4px;                   /* 🔸 casi sin hueco entre ambos */
+    max-width: 680px;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .login-right {
+    flex: 0 1 auto;
+    margin-top: -20px;          /* 🔸 sube el bloque del logo, elimina aire sobrante */
+  }
+
+  .logo-evai {
+    width: clamp(260px, 62vw, 420px);  /* fluido en móvil */
+    margin-top: 0;
+  }
+}

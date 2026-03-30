@@ -1,0 +1,39 @@
+/* =========================
+   EVAi · Tema Lila
+   ========================= */
+
+:root{
+  /* Header */
+  --topfondo: linear-gradient(135deg, #7c3aed 0%, #c084fc 100%);
+  --toptexto: #ffffff;
+  --toplink: #f3e8ff;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* Página */
+  --bodyfondo: #f5f3ff;     /* lila muy claro */
+  --bodytexto: #2e1065;     /* morado profundo legible */
+
+  /* Links */
+  --bodylink: #7c3aed;      /* violeta */
+  --bodylinkover: #6d28d9;  /* violeta más oscuro */
+
+  /* Cajas */
+  --caja-bg: #ffffff;
+  --caja-head-bg: #e9d5ff;  /* cabecera ligeramente teñida de lila */
+  --caja-head-tx: #2e1065;
+
+  /* Tablas */
+  --th: #f3e8ff;
+  --tr: #ffffff;
+  --trover: #faf5ff;
+  --tableborder: #e9d5ff;
+
+  /* Botones */
+  --submifondo: #7c3aed;
+  --submitexto: #ffffff;
+  --csubmiover: #6d28d9;
+
+  /* Iconos / acentos */
+  --icono-color: #a78bfa;   /* lila principal */
+}

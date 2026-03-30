@@ -1,0 +1,70 @@
+:root{
+  /* HEADER (overlay suave para matar brillos) */
+  --topfondo:
+    linear-gradient(0deg, rgba(0,0,0,.06), rgba(0,0,0,.06)),
+    linear-gradient(135deg, #3a6fd8 0%, #66c0e3 100%);
+  --toptexto: #ffffff;
+  --toplink: #eaf3ff;
+  --toplinkover: #ffffff;
+  --toplinkactivo: #ffffff;
+
+  /* PÁGINA / CONTENEDOR (paleta fría a juego) */
+  --bodyfondo: #e6eef7;      /* más frío que #e2e8f0, encaja mejor con el header */
+  --bodytexto: #0f2940;      /* azul marino legible */
+  --container-bg: #ffffff;   /* tarjetas/cajas sobre el fondo */
+
+  /* ENLACES DEL BODY */
+  --bodylink: #2d6cdf;       /* azul accesible */
+  --bodylinkover: #1b4fbf;
+
+  /* BOTONES SUBMIT (azul primario del header) */
+  --submifondo: #3a6fd8;
+  --submitexto: #ffffff;
+  --csubmiover: #2f59b9;
+
+  /* TABLAS (azules muy suaves) */
+  --th: #eaf1fb;
+  --tr: #ffffff;
+  --trover: #f3f7fd;
+  --tableborder: #cbd5e1;
+  
+  --caja-head-tx: #ffffff; /* o el color que quieras en cabeceras */
+  --caja-head-tx: var(--bodytexto);
+  
+  /* Fondo de la caja: blanco */
+  --caja-bg: #ffffff;
+
+  /* Cabecera = un pelín más oscura que el fondo */
+  --caja-head-bg: color-mix(in srgb, var(--caja-bg) 90%, #000 10%);
+  --caja-head-tx: #0f2940; /* texto azul marino legible */
+    
+}
+/* Variante de cajas con cabecera suave (sin barra sólida) */
+.caja.caja--soft .caja__head {
+  background: transparent !important;   /* fuera color sólido */
+  color: var(--bodytexto);              /* texto normal del body */
+  border-bottom: 1px solid var(--tableborder);
+  padding: 16px 18px;
+}
+
+.caja.caja--soft .caja__title {
+  font-size: 1.25rem;   /* ~20px */
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Icono opcional junto al título */
+.caja.caja--soft .caja__title .ico {
+  width: 20px; height: 20px;
+  margin-right: 8px;
+  opacity: .7;
+}
+
+.caja__title {
+  font-size: 1.4rem;   /* ~22px */
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--bodytexto); /* asegúrate de que no se queden blancos */
+  margin: 0;
+}

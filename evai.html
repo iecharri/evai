@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Memoria EVAi – Historia de un entorno educativo pionero</title>
+  <meta name="description" content="Memoria del proyecto EVAi, un entorno virtual de aprendizaje interactivo nacido en la universidad en 2000. Un recorrido por su historia, su espíritu colaborativo y su legado educativo.">
+  <meta name="keywords" content="EVAi, entorno virtual de aprendizaje, plataforma educativa, historia del e-learning, aprendizaje interactivo, educación digital, memoria EVAi, entornos virtuales, demo EVAi, plataforma educativa universitaria">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="EVAi — Entorno Virtual de Aprendizaje Interactivo">
+  <meta property="og:description" content="Memoria histórica de una plataforma educativa pionera en entornos virtuales de aprendizaje.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://evaidemo.org/evai.html">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="canonical" href="https://evaidemo.org/evai.html" />
+
+  <!-- Favicon y App icons -->
+  <link rel="icon" type="image/png" sizes="32x32"  href="https://evaidemo.org/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://evaidemo.org/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512"      href="https://evaidemo.org/favicon-512.png">
+  <link rel="icon" href="https://evaidemo.org/favicon.ico" type="image/x-icon">
+
+  <style>
+    :root{ --merlin-bg:#ffffcc; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0;
+      font-family:"Segoe UI", Arial, sans-serif;
+      background:var(--merlin-bg);
+      color:#0b2530;
+      line-height:1.6;
+    }
+
+    .container{
+      position:relative; 
+      z-index:2;
+      width:min(700px,80vw);
+      margin:40px auto 40px 40px;
+      background:rgba(255,255,255,.95);  /* vuelve al blanco semitransparente */
+      border-radius:16px;
+      padding:32px 28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+    }
+
+    h1{ margin:.2em 0 .6em; color:#0e3b4a; font-size:clamp(1.6rem,2.4vw,2.2rem) }
+    p{ margin:0 0 1em }
+
+    .topnav{ margin-bottom:14px }
+    .btn{
+      display:inline-block; margin:.25em .35em .25em 0; padding:.6em 1.1em;
+      border-radius:10px; text-decoration:none; font-weight:600;
+    }
+    .btn.primary{ background:#0d60a5; color:#fff }
+    .btn.primary:hover{ background:#0b5290 }
+    .btn.ghost{ background:#fff; color:#0d60a5; border:2px solid #0d60a5 }
+    .btn.ghost:hover{ background:#eef6ff }
+
+    .merlin{
+      position:fixed;
+      right:24px; 
+      bottom:24px;
+      width:260px;   /* más pequeño en escritorio */
+      height:auto;
+      z-index:1;
+      pointer-events:none; 
+      opacity:0.85;
+    }
+
+    @media (max-width:900px){
+      .merlin{
+        position:static;     
+        display:block;
+        margin:10px auto 20px auto;
+        width:min(240px,70vw);
+        opacity:0.9;
+      }
+      .container{
+        width:92vw; 
+        margin:0 auto 20px auto;
+        padding:22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Merlin: en desktop fijo abajo, en móvil aparece arriba -->
+  <img src="merlin.gif" alt="Merlin saludando" class="merlin">
+
+  <div class="container">
+    <div class="topnav">
+      <a class="btn ghost" href="index.html">← Volver a la portada</a>
+      <a class="btn primary" href="index.php">💻 Entrar en la plataforma</a>
+    </div>
+
+    <h1>Memoria de EVAi</h1>
+
+    <p><strong>EVAi</strong> (Entorno Virtual de Aprendizaje Interactivo) fue una plataforma educativa desarrollada a comienzos de los años 2000 y en uso hasta 2023, 
+    creada para apoyar la docencia universitaria y de posgrado. Permitía integrar recursos, foros, chat, votación de enlaces, evaluaciones y múltiples herramientas interactivas en 
+    un mismo espacio en línea.</p>
+
+    <p>Nació en un aula universitaria. No fue un proyecto planificado
+      ni un encargo institucional: surgió porque hacía falta un espacio digital que acompañara las clases, ayudara a participar
+      más y diera nuevas formas de trabajar. Desde el principio se fue construyendo al mismo tiempo que se usaba. Cada curso y
+      cada grupo aportaba algo nuevo, y poco a poco el sistema fue creciendo con las necesidades reales de quienes lo utilizaban.</p>
+
+      <p>Con el tiempo, EVAi empezó a usarse también en másteres de cooperación al desarrollo y en colaboraciones con universidades
+      extranjeras. Muchos estudiantes seguían sus estudios mientras trabajaban en ONGs en distintos países. Esa diversidad geográfica
+      trajo un problema muy simple pero decisivo: las horas. La plataforma mostraba la hora del servidor, y mientras unos veían la tarde,
+      otros estaban de madrugada. Para resolverlo, se guardaron todas las fechas en <strong>UTC</strong> y se mostraban en la hora local de
+      cada usuario. Fue una solución práctica que permitió a estudiantes y profesores coordinarse sin malentendidos.</p>
+
+      <p>La dinámica en clase era muy participativa. Durante las prácticas, el profesor proyectaba EVAi en pantalla grande. Los alumnos
+      buscaban enlaces relacionados con la asignatura y los subían en tiempo real. Cada nuevo vínculo hacía sonar una campana, aparecía en
+      la pantalla y era anunciado por el <strong>mago Merlin</strong>, un avatar animado con voz sintetizada. El profesor podía introducir frases
+      rápidas en su ordenador que, de repente, salían de la boca del mago como si aparecieran de la nada. Esa mezcla de humor, sorpresa y
+      tecnología convertía la búsqueda de información en un juego compartido.</p>
+
+      <p>Merlin se convirtió en un símbolo. Con su voz animada, felicitaba cumpleaños, celebraba logros o simplemente lanzaba ocurrencias
+      que rompían la seriedad del momento. Era un toque de humor y cercanía que motivaba a seguir participando.</p>
+
+      <p>Los enlaces no solo se compartían: también se votaban. Esto daba lugar a un ranking donde los recursos más valorados destacaban
+      sobre los demás. En una ocasión, un grupo de alumnos creó un usuario ficticio llamado <em>Daniel el Travieso</em>, que se dedicaba
+      a dar la máxima puntuación únicamente a sus propios enlaces. El truco se descubrió pronto, entre risas, y sirvió para crear un módulo
+      que detectaba anomalías en los votos. Aquella pequeña travesura se transformó en una mejora para el sistema.</p>
+
+      <p>La evaluación también se apoyaba en EVAi. Los profesores podían crear exámenes tipo test, con tiempo limitado, y luego combinar los
+      resultados con las valoraciones entre compañeros y su propia nota. El cálculo se hacía de forma automática y con un clic se enviaba la
+      calificación personalizada a cada estudiante por correo electrónico. Incluso se probó un sistema de envío de notas por SMS, pero en
+      aquella época resultaba caro y no se continuó.</p>
+
+      <p>Junto al módulo de exámenes existía otro de encuestas. El profesor podía preparar una bolsa de preguntas y, a partir de ella, generar
+      distintos cuestionarios. Estos se enviaban por correo o se dejaban accesibles en la plataforma. También se usaron para investigaciones,
+      ya que podían responderlos personas ajenas a EVAi. Así, además de servir para la docencia, el sistema ayudó a recoger datos de interés
+      académico.</p>
+
+      <p>La interacción no se limitaba a foros. Había <strong>chats grupales</strong>, <strong>chats de asignatura</strong> y la posibilidad de abrir
+      <strong>chats “al vuelo”</strong> que podían multiplicarse sin límite. También había un área de <strong>mensajería interna</strong> con envío de ficheros
+      entre usuarios. Todo ello mantenía un flujo de comunicación constante, como si la plataforma tuviera siempre un murmullo de fondo.</p>
+
+      <p>En lo organizativo, EVAi contaba con distintos roles de usuario: los recién llegados que validaban su correo, los alumnos, los profesores,
+      los administradores de asignatura y los superadministradores. Cada estudiante tenía su propia <strong>agenda personal</strong>, donde podía anotar lo suyo
+      y a la que los profesores añadían recordatorios de sus asignaturas, diferenciados por colores. Había también <strong>grupos de trabajo</strong> con foro y
+      carpeta de recursos propia. Los alumnos subían archivos a sus carpetas personales y a las carpetas de sus profesores, lo que facilitaba a éstos
+      la revisión de las entregas.</p>
+
+      <p>El <strong>POD (Plan de Ordenación Docente)</strong> fue otro módulo importante. Permitía crear áreas y asignaturas, validar profesores y registrar horas de
+      docencia. Con él, EVAi no solo servía como aula virtual, sino también como herramienta de gestión académica.</p>
+
+      <p>No todo resultaba sencillo en los primeros años. Se pedía a los alumnos grabar un vídeo de presentación personal, con sus motivaciones y aficiones,
+      y eso generaba nervios. La mayoría no tenía cámara y muchas veces eran los profesores quienes prestaban la suya para que pudieran grabarse. Subir una
+      foto de perfil también era complicado: pocos tenían imágenes digitales y las conexiones eran lentas. Lo que hoy es rutinario entonces era todo un reto.</p>
+
+      <p>Con el tiempo, esas dificultades se fueron superando. EVAi se mantuvo en uso hasta hace apenas un par de años, y ya entonces grabar un vídeo o subir
+      una foto era algo normal para cualquier estudiante. Lo que al inicio fue un obstáculo técnico, después se volvió parte natural de la experiencia. Los
+      primeros vídeos eran estáticos y tímidos, pero con el tiempo se hicieron más creativos. Fue una manera de aprender a manejarse en el futuro mundo de la
+      imagen social.</p>
+
+      <p>Visualmente, EVAi era funcional. No destacaba por su diseño: cada módulo tenía un aire distinto. Pero cargaba rápido,
+      era claro y funcionaba incluso con poca conexión. Tenía además detalles creativos, como Merlin o los mensajes automáticos, que lo hacían único.</p>
+
+      <p>Con los años, EVAi fue acumulando una gran base de datos de enlaces y comentarios, especialmente en el área de <strong>Recursos Humanos</strong>. Aunque muchos de
+      esos enlaces ya no estén activos, lo valioso es que se conserva lo que los alumnos escribieron sobre ellos: resúmenes, impresiones, conexiones con sus
+      estudios. Es un archivo construido a lo largo de más de 25 años, que muestra cómo los estudiantes aprendieron y compartieron en un tiempo en que la
+      educación digital todavía se estaba inventando.</p>
+
+      <p>Hoy, EVAi se puede recorrer en una <strong>versión demo</strong>. Se accede con permisos de superadministrador, pero sin posibilidad de guardar cambios, de modo que
+      cualquiera puede asomarse a su funcionamiento real sin alterar nada. Así permanece como memoria viva de una época en que lo digital se improvisaba con
+      ingenio, humor y mucha dedicación.</p>
+ 
+    <p>Para preservar la privacidad, en la versión de demostración de EVAi se han modificado nombres, correos electrónicos y entradas de foros. 
+    Aun así, si apareciera algún dato personal no deseado, se retirará en futuras revisiones. 
+    Puedes comunicarlo en <a href="mailto:info@evaidemo.org">info@evaidemo.org</a>.</p>
+
+    
+<div style="
+  margin-top:40px;
+  padding:20px 24px;
+  border-radius:12px;
+  background:rgba(255, 255, 230, 0.9); /* tono amarillo suave translúcido */
+  box-shadow:0 0 10px rgba(0,0,0,0.08);
+  font-style:italic;
+  text-align:center;
+  color:#333;
+">
+  <p>✨ <strong>EVAi</strong>, Entorno Virtual de Aprendizaje Interactivo.<br>
+  Nació entre foros y campanitas, creció entre risas y enlaces compartidos.<br>
+  Su fantasma sigue en línea, hablando con voz de Merlin y corrigiendo exámenes en la eternidad.</p>
+</div>
+    
+    
+  </div>
+
+</body>
+</html>

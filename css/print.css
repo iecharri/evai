@@ -1,0 +1,18 @@
+body {background:#fff;font-size:80%}
+#navhsimple, .subc-top, .noimprimir {display:none;}
+#top{display:none;}
+div.saltopagina{display:block;page-break-before:always;}
+.soloimp{display:inline;}
+div {float: none}
+
+.imagen.med {width: 6em;height: 6em;}
+
+.colu {
+	border:1px solid #c0c0c0; padding:1em;text-align: justify;
+}
+.colu2 {
+	border-left:3px solid #666666;
+	margin-right:1em;
+	background:#d5d5d5;
+	padding:.7em;
+}

@@ -1,0 +1,286 @@
+/* Tarjeta compacta */
+.mini-cal.card{
+  --mc-bg: var(--bodyfondo, #000);
+  --mc-bd: color-mix(in oklab, var(--topfondo, #2b6cb0) 10%, #000 10%);
+  --mc-tx: var(--text, #222);
+  max-width: 300px;                 /* ← estrecha */
+  width: 100%;
+  background: var(--mc-bg);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+/* Cabecera */
+.mini-cal__head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: .5rem .75rem;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--topfondo,#4facfe) 80%, #000 0%) , var(--bodyfondo,#000));
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.mini-cal__title{
+  font-weight: 700;
+  text-align:center;
+  text-decoration:none;
+  color: #14303f;
+}
+.mini-cal__nav{
+  display:inline-grid; place-items:center;
+  width: 28px; height: 28px; border-radius: 999px;
+  text-decoration:none; font-size: 18px; line-height: 1;
+  color:#14303f; background: rgba(255,255,255,.7);
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+.mini-cal__nav:hover{ transform: translateY(-1px); }
+
+/* Cuerpo (la función suele imprimir una tabla con clase calendario) */
+.mini-cal__body{
+  padding: .5rem .5rem .25rem;
+}
+.mini-cal__body table{
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 2px;              /* celdas con respiración */
+  table-layout: fixed;              /* columnas homogéneas */
+  font-size: .9rem;                 /* compacto */
+}
+.mini-cal__body th{
+  font-weight:600; font-size:.75rem; color:#50606a;
+  padding:.25rem 0;
+}
+.mini-cal__body td{
+  background:#fff; border:1px solid rgba(0,0,0,.06);
+  border-radius:8px; height:32px; text-align:center; vertical-align:middle;
+  position:relative; overflow:hidden;
+}
+.mini-cal__body td:hover{ box-shadow: inset 0 0 0 999px rgba(0,0,0,.03); }
+
+/* Si tu calendario marca "hoy" con una clase (ajústala si es otra) */
+.mini-cal__body td.hoy{
+  outline:2px solid color-mix(in oklab, var(--topfondo,#4facfe) 60%, #fff 0%);
+  outline-offset:-2px;
+  font-weight:700;
+}
+
+/* Leyenda */
+.mini-cal__legend{
+  display:flex; gap:.5rem; justify-content:flex-end; align-items:center;
+  padding:.4rem .6rem .6rem;
+}
+.mini-chip{ display:inline-flex; align-items:center; gap:.35rem; font-size:.78rem; color:#50606a; }
+.mini-dot{
+  width:.75rem; height:.75rem; border-radius:50%;
+  display:inline-block; border:1px solid rgba(0,0,0,.12);
+}
+/* Reusa tus clases existentes para colorear el punto */
+.mini-dot.cajadiayel{ background: #f8d54b; }
+.mini-dot.cajadiared{ background: #ef6b6b; }
+
+/* Ajuste por si la tabla del calendario trae bordes propios */
+.mini-cal__body table.calendario,
+.mini-cal__body table.calendario td,
+.mini-cal__body table.calendario th{ border:none; }
+
+.mini-cal {
+  margin-left: auto;   /* empuja hacia la derecha */
+}
+
+
+
+
+
+
+/* ====== Calendarios "grande" (g=1 ó g=2) y "pequeño" (g=3) ====== */
+table#calendario,
+table#calendariog{
+  width: 100%;
+  table-layout: fixed;          /* columnas homogéneas */
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bodyfondo,#fff);
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* cabecera de días */
+#calendario th, #calendariog th{
+  background: color-mix(in oklab, var(--topfondo,#4facfe) 12%, #ffffff 88%);
+  color: #2a3b47;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-align: center;
+  padding: .5rem 0;
+  border-right: 1px solid rgba(0,0,0,.06);
+}
+#calendario th:last-child, #calendariog th:last-child{ border-right: 0; }
+
+/* celdas: ALTURA ELÁSTICA + contenido arriba-izquierda */
+#calendario td, #calendariog td{
+  vertical-align: top;
+  padding: 8px 8px 10px;
+  border-right: 1px solid rgba(0,0,0,.06);
+  border-top: 1px solid rgba(0,0,0,.06);
+  background: #f7f2ee40;         /* muy sutil */
+  min-height: 96px;               /* base; crece si hay contenido */
+  height: auto;                   /* ← clave para que se expanda */
+  word-wrap: break-word;
+}
+#calendariog td{ min-height: 120px; } /* g=2 un poco más alto */
+
+#calendario tr:last-child td, #calendariog tr:last-child td{
+  border-bottom: 0;
+}
+#calendario td:last-child, #calendariog td:last-child{
+  border-right: 0;
+}
+
+/* celdas vacías (principio/fin de mes) */
+#calendario td.sin, #calendariog td.sin{
+  background: #f4f6f8;
+}
+
+/* fin de semana (tu clase "finde") */
+#calendario td.finde, #calendariog td.finde{
+  background: #6d6d6d;           /* como en tu captura */
+  color: #fff;
+}
+
+/* hoy (tu clase "dh") */
+#calendario td.dh, #calendariog td.dh{
+  outline: 2px solid color-mix(in oklab, var(--topfondo,#4facfe) 70%, #000 0%);
+  outline-offset: -2px;
+  background: #fff;
+}
+
+/* número del día: el <div> con el <a> va primero en cada td */
+#calendario td > div:first-child a,
+#calendariog td > div:first-child a{
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: color-mix(in oklab, var(--topfondo,#4facfe) 80%, #0b2c3b 20%);
+  margin-bottom: 4px;
+}
+
+/* contenido que pintas después (iconos/textos de agenda()) */
+#calendario td > *:not(:first-child),
+#calendariog td > *:not(:first-child){
+  display: block;
+  margin-top: 4px;
+  line-height: 1.25;
+  font-size: .95rem;
+}
+#calendario td img, #calendariog td img{ max-width: 100%; height: auto; }
+#calendario td .icon, #calendariog td .icon{ vertical-align: middle; }
+
+/* versión pequeña (g=3) ya la tienes; por si acaso: */
+table#calendariop{
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+#calendariop th{ font-size: .8rem; padding:.25rem 0; }
+#calendariop td{
+  vertical-align: top;
+  padding: .35rem;
+  min-height: 32px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 8px;
+  /*background: #fff;*/
+}
+#calendariop td.dh{ outline: 2px solid color-mix(in oklab, var(--topfondo,#4facfe) 60%, #000 0%); outline-offset:-2px; }
+
+/* responsivo: cuando el contenedor se estrecha, reducimos tipografía */
+@media (max-width: 900px){
+  #calendariog td{ min-height: 96px; }
+  #calendario th, #calendariog th{ font-size: .95rem; }
+}
+
+/* === Estilo UNIFICADO para los tres calendarios: mini, pequeño y grande === */
+/* Tarjeta blanca con bordes redondeados */
+#calendario,
+#calendariog,
+#calendariop {
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.10) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  border-collapse: separate !important;
+  border-spacing: 4px !important;   /* aire entre celdas */
+  overflow: hidden;
+}
+
+/* Cabecera homogénea */
+#calendario th,
+#calendariog th,
+#calendariop th {
+  background: var(--topfondo) !important;   /* color del tema */
+  color: #fff !important;
+  font-weight: 700;
+  text-align: center;
+  padding: .35em .4em;
+  border-radius: 8px;
+}
+
+/* Celdas base */
+#calendario td,
+#calendariog td,
+#calendariop td {
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  padding: .35em .25em;
+  transition: box-shadow .15s ease, transform .05s ease;
+}
+
+/* Hover sutil coherente en los tres */
+#calendario td:hover,
+#calendariog td:hover,
+#calendariop td:hover {
+  box-shadow: inset 0 0 0 999px rgba(0,0,0,.03);
+}
+
+/* FINES DE SEMANA → color del tema */
+#calendario td.finde,
+#calendariog td.finde,
+#calendariop td.finde {
+  background: var(--topfondo) !important;   /* ← dominante del tema */
+  color: #fff !important;
+  border-color: color-mix(in oklab, var(--topfondo) 80%, #000 20%);
+}
+
+/* DÍA ACTUAL (HOY) → prevalece sobre finde */
+#calendario td.dh,
+#calendariog td.dh,
+#calendariop td.dh {
+  background: #fff !important;
+  color: var(--topfondo) !important;
+  font-weight: 800;
+  outline: 2px solid var(--topfondo) !important;
+  outline-offset: -2px;              /* marco interior limpio */
+  border-color: var(--topfondo) !important;
+}
+
+/* Si HOY cae en finde, mantiene el estilo de HOY (regla más específica) */
+#calendario td.finde.dh,
+#calendariog td.finde.dh,
+#calendariop td.finde.dh {
+  background: #fff !important;
+  color: var(--topfondo) !important;
+  border-color: var(--topfondo) !important;
+  outline: 2px solid var(--topfondo) !important;
+  outline-offset: -2px;
+}
+
+/* (Opcional) tamaño de fuente y espaciado coherente */
+#calendario td, #calendario th,
+#calendariog td, #calendariog th,
+#calendariop td, #calendariop th {
+  font-size: .95rem;
+  line-height: 1.2;
+}

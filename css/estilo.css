@@ -1,0 +1,185 @@
+:root {
+
+--topfondo : *c0*;
+--toplink : *c1*;
+--toplinkactivo : *c2*;
+--toplinkover : *c3*;
+--toptexto : *c4*;
+
+--bodyfondo : *c5*;
+--bodylink : *c6*;
+--bodylinkover : *c7*;
+--bodytexto : *c8*;
+
+--submifondo : *c9*;
+--submitexto : *c10*;
+--csubmiover : *c11*;
+
+--th : *c12*;
+--trover :*c13*;
+--tr : *c14*;
+--tableborder :*c15*;
+
+  --header-h: 60px;
+  --container-bg: var(--bodyfondo);
+
+}
+      
+table {background-color:var(--tr);}
+table.conhover tr:hover td {background-color: var(--trover);}
+th, th a{color:var(--trover);background-color:var(--th);}
+th a{text-decoration:underline}
+td, th {border: 1px solid var(--tableborder);}
+
+table td .colusu {background:#E3DCD9}
+table td .calific1 {color:#fff}
+table td .calific2 {color:#800000}
+
+/***************** TOP ****************/
+body{background:var(--bodyfondo);color:var(--bodytexto);}
+a{color:var(--bodylink);}
+a:hover {background-color:transparent;color:var(--bodylinkover);}
+
+/***************************************/
+
+#top, #toppanel {
+  background:var(--topfondo);color:var(--toptexto);
+}
+#top a{color:var(--toplink);}
+#top a.active{color:var(--toplinkactivo);}
+#top a:hover{color:var(--toplinkover);text-decoration:none;}
+
+/*.menu.hover{color:var(--toplinkover);}*/
+
+.laterall a:hover, #divficha a:hover{ background:var(--topfondo);}
+.laterall a.active, #divficha a.active  {background:var(--topfondo);color:var(--toplink);}
+
+/***************************************/
+
+.chatmini {background-color:var(--topfondo);color:var(--toptexto);width:100%;padding:.5em;}
+
+legend {padding:1em;font-size:1.2em;font-weight:bold}
+
+input[type=submit], input[type=reset], input[type=button]{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: var(--submitexto);
+  background: var(--submifondo);
+  border: solid var(--submifondo) 2px;
+  text-decoration: none;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
+  background: var(--csubmiover);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, .txth {color: var(--th);}
+
+.colu {
+	border:1px solid var(--th);
+}
+
+.colu1 {
+	background:var(--th);
+	color:var(--trover);
+}
+.colu1 a{color:var(--trover)}
+
+/***************************************/
+
+.caja2{background:#E3DCD9;color:#fff;text-align:center}
+
+/***************************************/
+
+#navhsimple{
+  list-style-type:none; margin:0; padding:0; overflow:hidden;
+  background: var(--topfondo);   /* ← simple y compatible con el tema */
+  width:100%; font-size:.7em;
+}
+
+
+
+#navhsimple li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+#navhsimple li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+
+ul#navhsimple li a:hover:not(.active) {
+    background-color: #888888;
+}
+
+#navhsimple #active {
+    background-color: #333332;
+}
+
+@media screen and (min-width:900px){/**************************************/
+	#navhsimple{font-size:.9em}
+	#navhsimple li a {padding: 14px 16px;};
+}
+
+@media screen and (min-width:730px){/**************************************/
+	#navhsimple{font-size:.8em}
+}
+
+/* Header */
+#top, .evai-header {
+  min-height: 60px;                 /* para que se vea el fondo */
+  background: var(--topfondo);      /* ← usa variable, no color directo */
+  color: var(--toptexto);
+}
+
+/* Links del top */
+#top a, .evai-header a {
+  color: var(--toplink);
+}
+#top a:hover, .evai-header a:hover {
+  color: var(--toplinkover);
+}
+#top a.activo, .evai-header a.activo {
+  color: var(--toplinkactivo);
+}
+
+/* Body */
+body {
+  background: var(--bodyfondo);
+  color: var(--bodytexto);
+}
+a { color: var(--bodylink); }
+a:hover { color: var(--bodylinkover); }
+
+/* Botones submit */
+button[type=submit], .btn-submit {
+  background: var(--submifondo);
+  color: var(--submitexto);
+}
+button[type=submit]:hover, .btn-submit:hover {
+  background: var(--csubmiover);
+}
+
+/* Tablas */
+table { border-color: var(--tableborder); }
+th    { background: var(--th); }
+tr    { background: var(--tr); }
+tr:hover { background: var(--trover); }
+
+
+body{
+  background: var(--bodyfondo);
+  color: var(--bodytexto);
+}
+
+#container{
+  background: var(--container-bg);
+  min-height: calc(100vh - var(--header-h)); /* que llene la ventana bajo el header */
+  /*padding: 16px;*/ /* para que se vea el fondo alrededor del contenido */
+}

@@ -1,0 +1,39 @@
+.ui-datepicker
+{
+width: auto;
+background: #D1AB9E;
+}
+
+/*Tabla con los días del mes*/
+.ui-datepicker table
+{
+font-size: .8em; /*.5px*/
+}
+
+/*La cabecera*/
+.ui-datepicker .ui-datepicker-header
+{
+font-size: .8em; /*12px;*/
+background: #FFFFFF;
+}
+
+/*Para los días de la semana: Sa Mo ... */
+.ui-datepicker th
+{
+color: #c0c0c0;
+background:#ffffff
+}
+
+/*Para items con los días del mes por defecto */
+.ui-datepicker .ui-state-default
+{
+background: #FFFFFF;
+}
+
+/*Para el item del día del mes seleccionado */
+.ui-datepicker .ui-state-active
+{
+background: #D1AB9E;
+color: #FFFFFF;
+}
+.ui-datepicker button{font-size:.5em}

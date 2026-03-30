@@ -1,0 +1,35 @@
+:root{
+  /* Header (turquesa más verdoso) */
+  --topfondo: linear-gradient(135deg,#0f766e,#2dd4bf);
+  --toptexto:#042f2e;
+  --toplink:#e6fffb;
+  --toplinkover:#ffffff;
+  --toplinkactivo:#ffffff;
+
+  /* Página */
+  --bodyfondo:#f0fdfa;      /* fondo con tinte verdoso */
+  --bodytexto:#064e3b;      /* teal oscuro legible */
+
+  /* Links */
+  --bodylink:#0f766e;
+  --bodylinkover:#115e59;
+
+  /* Cajas */
+  --caja-bg:#ffffff;
+  --caja-head-bg:#ccfbf1;   /* aqua muy claro */
+  --caja-head-tx:#065f46;
+
+  /* Tablas */
+  --th:#d1fae5;
+  --tr:#ffffff;
+  --trover:#ecfeff;
+  --tableborder:#99f6e4;
+
+  /* Botones */
+  --submifondo:#0d9488;
+  --submitexto:#ffffff;
+  --csubmiover:#0f766e;
+
+  /* Iconos / acentos */
+  --icono-color:#5eead4;
+}
