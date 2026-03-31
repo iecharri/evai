@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Memoria EVAi – Historia de un entorno educativo pionero</title>
-  <meta name="description" content="Memoria del proyecto EVAi, un entorno virtual de aprendizaje interactivo nacido en la universidad en 2000. Un recorrido por su historia, su espíritu colaborativo y su legado educativo.">
-  <meta name="keywords" content="EVAi, entorno virtual de aprendizaje, plataforma educativa, historia del e-learning, aprendizaje interactivo, educación digital, memoria EVAi, entornos virtuales, demo EVAi, plataforma educativa universitaria">
+  <title>EVAi Memory – History of a pioneering educational environment</title>
+  <meta name="description" content="The story of EVAi, an interactive virtual learning environment born at university in 2000. A journey through its history, collaborative spirit, and educational legacy.">
+  <meta name="keywords" content="EVAi, virtual learning environment, educational platform, e-learning history, interactive learning, digital education, EVAi memory, virtual environments, EVAi demo, university educational platform">
+  <meta name="author" content="Inma">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="EVAi — Entorno Virtual de Aprendizaje Interactivo">
-  <meta property="og:description" content="Memoria histórica de una plataforma educativa pionera en entornos virtuales de aprendizaje.">
+  <meta property="og:title" content="EVAi — Interactive Virtual Learning Environment">
+  <meta property="og:description" content="Historical record of a pioneering educational platform in virtual learning environments.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://evaidemo.org/evai.html">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -31,11 +32,11 @@
     }
 
     .container{
-      position:relative; 
+      position:relative;
       z-index:2;
       width:min(700px,80vw);
       margin:40px auto 40px 40px;
-      background:rgba(255,255,255,.95);  /* vuelve al blanco semitransparente */
+      background:rgba(255,255,255,.95);
       border-radius:16px;
       padding:32px 28px;
       box-shadow:0 10px 30px rgba(0,0,0,.15);
@@ -56,25 +57,25 @@
 
     .merlin{
       position:fixed;
-      right:24px; 
+      right:24px;
       bottom:24px;
-      width:260px;   /* más pequeño en escritorio */
+      width:260px;
       height:auto;
       z-index:1;
-      pointer-events:none; 
+      pointer-events:none;
       opacity:0.85;
     }
 
     @media (max-width:900px){
       .merlin{
-        position:static;     
+        position:static;
         display:block;
         margin:10px auto 20px auto;
         width:min(240px,70vw);
         opacity:0.9;
       }
       .container{
-        width:92vw; 
+        width:92vw;
         margin:0 auto 20px auto;
         padding:22px 18px;
       }
@@ -83,111 +84,111 @@
 </head>
 <body>
 
-  <!-- Merlin: en desktop fijo abajo, en móvil aparece arriba -->
-  <img src="merlin.gif" alt="Merlin saludando" class="merlin">
+  <!-- Merlin: fixed bottom on desktop, appears top on mobile -->
+  <img src="merlin.gif" alt="Merlin waving" class="merlin">
 
   <div class="container">
     <div class="topnav">
-      <a class="btn ghost" href="index.html">← Volver a la portada</a>
-      <a class="btn primary" href="index.php">💻 Entrar en la plataforma</a>
+      <a class="btn ghost" href="index.html">← Back to home</a>
+      <a class="btn primary" href="index.php">💻 Enter the platform</a>
     </div>
 
-    <h1>Memoria de EVAi</h1>
+    <h1>The EVAi Story</h1>
 
-    <p><strong>EVAi</strong> (Entorno Virtual de Aprendizaje Interactivo) fue una plataforma educativa desarrollada a comienzos de los años 2000 y en uso hasta 2023, 
-    creada para apoyar la docencia universitaria y de posgrado. Permitía integrar recursos, foros, chat, votación de enlaces, evaluaciones y múltiples herramientas interactivas en 
-    un mismo espacio en línea.</p>
+    <p><strong>EVAi</strong> (Interactive Virtual Learning Environment) was an educational platform developed in the early 2000s and in use until 2023,
+    created to support university and postgraduate teaching. It allowed resources, forums, chat, link voting, assessments and multiple interactive tools to be integrated
+    in a single online space.</p>
 
-    <p>Nació en un aula universitaria. No fue un proyecto planificado
-      ni un encargo institucional: surgió porque hacía falta un espacio digital que acompañara las clases, ayudara a participar
-      más y diera nuevas formas de trabajar. Desde el principio se fue construyendo al mismo tiempo que se usaba. Cada curso y
-      cada grupo aportaba algo nuevo, y poco a poco el sistema fue creciendo con las necesidades reales de quienes lo utilizaban.</p>
+    <p>It was born in a university classroom. It was neither a planned project
+      nor an institutional commission: it emerged because there was a need for a digital space to accompany classes, encourage greater participation
+      and offer new ways of working. From the very beginning it was built at the same time as it was being used. Each course and
+      each group contributed something new, and little by little the system grew to meet the real needs of those who used it.</p>
 
-      <p>Con el tiempo, EVAi empezó a usarse también en másteres de cooperación al desarrollo y en colaboraciones con universidades
-      extranjeras. Muchos estudiantes seguían sus estudios mientras trabajaban en ONGs en distintos países. Esa diversidad geográfica
-      trajo un problema muy simple pero decisivo: las horas. La plataforma mostraba la hora del servidor, y mientras unos veían la tarde,
-      otros estaban de madrugada. Para resolverlo, se guardaron todas las fechas en <strong>UTC</strong> y se mostraban en la hora local de
-      cada usuario. Fue una solución práctica que permitió a estudiantes y profesores coordinarse sin malentendidos.</p>
+    <p>Over time, EVAi also began to be used in development cooperation master's programmes and in collaborations with foreign
+      universities. Many students continued their studies while working for NGOs in different countries. That geographical diversity
+      brought a very simple but decisive problem: time zones. The platform showed the server time, and while some users saw the afternoon,
+      others were in the middle of the night. To solve it, all dates were stored in <strong>UTC</strong> and displayed in each
+      user's local time. It was a practical solution that allowed students and teachers to coordinate without misunderstandings.</p>
 
-      <p>La dinámica en clase era muy participativa. Durante las prácticas, el profesor proyectaba EVAi en pantalla grande. Los alumnos
-      buscaban enlaces relacionados con la asignatura y los subían en tiempo real. Cada nuevo vínculo hacía sonar una campana, aparecía en
-      la pantalla y era anunciado por el <strong>mago Merlin</strong>, un avatar animado con voz sintetizada. El profesor podía introducir frases
-      rápidas en su ordenador que, de repente, salían de la boca del mago como si aparecieran de la nada. Esa mezcla de humor, sorpresa y
-      tecnología convertía la búsqueda de información en un juego compartido.</p>
+    <p>The classroom dynamic was highly participatory. During practical sessions, the teacher projected EVAi on a large screen. Students
+      searched for links related to the subject and uploaded them in real time. Each new link rang a bell, appeared on
+      the screen and was announced by <strong>Merlin the wizard</strong>, an animated avatar with a synthesised voice. The teacher could type quick phrases
+      on their computer that would suddenly come out of the wizard's mouth as if from nowhere. That blend of humour, surprise and
+      technology turned information searching into a shared game.</p>
 
-      <p>Merlin se convirtió en un símbolo. Con su voz animada, felicitaba cumpleaños, celebraba logros o simplemente lanzaba ocurrencias
-      que rompían la seriedad del momento. Era un toque de humor y cercanía que motivaba a seguir participando.</p>
+    <p>Merlin became a symbol. With his animated voice, he congratulated birthdays, celebrated achievements or simply launched quips
+      that broke the seriousness of the moment. He was a touch of humour and warmth that motivated people to keep participating.</p>
 
-      <p>Los enlaces no solo se compartían: también se votaban. Esto daba lugar a un ranking donde los recursos más valorados destacaban
-      sobre los demás. En una ocasión, un grupo de alumnos creó un usuario ficticio llamado <em>Daniel el Travieso</em>, que se dedicaba
-      a dar la máxima puntuación únicamente a sus propios enlaces. El truco se descubrió pronto, entre risas, y sirvió para crear un módulo
-      que detectaba anomalías en los votos. Aquella pequeña travesura se transformó en una mejora para el sistema.</p>
+    <p>Links were not only shared: they were also voted on. This created a ranking where the most valued resources stood out
+      above the rest. On one occasion, a group of students created a fictional user called <em>Daniel the Mischievous</em>, who dedicated himself
+      to giving maximum scores only to his own links. The trick was discovered quickly, amid laughter, and led to the creation of a module
+      that detected anomalies in votes. That small prank became an improvement for the system.</p>
 
-      <p>La evaluación también se apoyaba en EVAi. Los profesores podían crear exámenes tipo test, con tiempo limitado, y luego combinar los
-      resultados con las valoraciones entre compañeros y su propia nota. El cálculo se hacía de forma automática y con un clic se enviaba la
-      calificación personalizada a cada estudiante por correo electrónico. Incluso se probó un sistema de envío de notas por SMS, pero en
-      aquella época resultaba caro y no se continuó.</p>
+    <p>Assessment was also supported by EVAi. Teachers could create multiple-choice tests with time limits, and then combine the
+      results with peer evaluations and their own grade. The calculation was done automatically and with one click a personalised
+      grade was sent to each student by email. A system for sending grades by SMS was even tested, but at the time
+      it was expensive and was not continued.</p>
 
-      <p>Junto al módulo de exámenes existía otro de encuestas. El profesor podía preparar una bolsa de preguntas y, a partir de ella, generar
-      distintos cuestionarios. Estos se enviaban por correo o se dejaban accesibles en la plataforma. También se usaron para investigaciones,
-      ya que podían responderlos personas ajenas a EVAi. Así, además de servir para la docencia, el sistema ayudó a recoger datos de interés
-      académico.</p>
+    <p>Alongside the exam module there was a survey module. The teacher could prepare a question bank and, from it, generate
+      different questionnaires. These were sent by email or made accessible on the platform. They were also used for research,
+      since people outside EVAi could respond to them. So, in addition to serving for teaching, the system helped collect data of academic
+      interest.</p>
 
-      <p>La interacción no se limitaba a foros. Había <strong>chats grupales</strong>, <strong>chats de asignatura</strong> y la posibilidad de abrir
-      <strong>chats “al vuelo”</strong> que podían multiplicarse sin límite. También había un área de <strong>mensajería interna</strong> con envío de ficheros
-      entre usuarios. Todo ello mantenía un flujo de comunicación constante, como si la plataforma tuviera siempre un murmullo de fondo.</p>
+    <p>Interaction was not limited to forums. There were <strong>group chats</strong>, <strong>subject chats</strong> and the possibility of opening
+      <strong>"on-the-fly" chats</strong> that could multiply without limit. There was also an <strong>internal messaging</strong> area with file sharing
+      between users. All of this maintained a constant flow of communication, as if the platform always had a background hum.</p>
 
-      <p>En lo organizativo, EVAi contaba con distintos roles de usuario: los recién llegados que validaban su correo, los alumnos, los profesores,
-      los administradores de asignatura y los superadministradores. Cada estudiante tenía su propia <strong>agenda personal</strong>, donde podía anotar lo suyo
-      y a la que los profesores añadían recordatorios de sus asignaturas, diferenciados por colores. Había también <strong>grupos de trabajo</strong> con foro y
-      carpeta de recursos propia. Los alumnos subían archivos a sus carpetas personales y a las carpetas de sus profesores, lo que facilitaba a éstos
-      la revisión de las entregas.</p>
+    <p>Organisationally, EVAi had different user roles: newcomers who validated their email, students, teachers,
+      subject administrators and superadministrators. Each student had their own <strong>personal agenda</strong>, where they could make notes
+      and to which teachers added reminders for their subjects, distinguished by colour. There were also <strong>working groups</strong> with a forum and
+      their own resource folder. Students uploaded files to their personal folders and to their teachers' folders, which made it easier for teachers
+      to review submissions.</p>
 
-      <p>El <strong>POD (Plan de Ordenación Docente)</strong> fue otro módulo importante. Permitía crear áreas y asignaturas, validar profesores y registrar horas de
-      docencia. Con él, EVAi no solo servía como aula virtual, sino también como herramienta de gestión académica.</p>
+    <p>The <strong>POD (Teaching Organisation Plan)</strong> was another important module. It allowed areas and subjects to be created, teachers validated and teaching hours
+      recorded. With it, EVAi served not only as a virtual classroom, but also as an academic management tool.</p>
 
-      <p>No todo resultaba sencillo en los primeros años. Se pedía a los alumnos grabar un vídeo de presentación personal, con sus motivaciones y aficiones,
-      y eso generaba nervios. La mayoría no tenía cámara y muchas veces eran los profesores quienes prestaban la suya para que pudieran grabarse. Subir una
-      foto de perfil también era complicado: pocos tenían imágenes digitales y las conexiones eran lentas. Lo que hoy es rutinario entonces era todo un reto.</p>
+    <p>Not everything was straightforward in the early years. Students were asked to record a personal presentation video, with their motivations and interests,
+      and that caused nerves. Most did not have a camera and often it was the teachers who lent theirs so students could record themselves. Uploading a
+      profile photo was also complicated: few had digital images and connections were slow. What is routine today was a real challenge back then.</p>
 
-      <p>Con el tiempo, esas dificultades se fueron superando. EVAi se mantuvo en uso hasta hace apenas un par de años, y ya entonces grabar un vídeo o subir
-      una foto era algo normal para cualquier estudiante. Lo que al inicio fue un obstáculo técnico, después se volvió parte natural de la experiencia. Los
-      primeros vídeos eran estáticos y tímidos, pero con el tiempo se hicieron más creativos. Fue una manera de aprender a manejarse en el futuro mundo de la
-      imagen social.</p>
+    <p>Over time, those difficulties were overcome. EVAi remained in use until just a couple of years ago, and by then recording a video or uploading
+      a photo was completely normal for any student. What was initially a technical obstacle later became a natural part of the experience. The
+      first videos were static and shy, but over time they became more creative. It was a way of learning to navigate the future world of
+      social media.</p>
 
-      <p>Visualmente, EVAi era funcional. No destacaba por su diseño: cada módulo tenía un aire distinto. Pero cargaba rápido,
-      era claro y funcionaba incluso con poca conexión. Tenía además detalles creativos, como Merlin o los mensajes automáticos, que lo hacían único.</p>
+    <p>Visually, EVAi was functional. It did not stand out for its design: each module had a different feel. But it loaded quickly,
+      was clear and worked even with a poor connection. It also had creative details, like Merlin or the automatic messages, that made it unique.</p>
 
-      <p>Con los años, EVAi fue acumulando una gran base de datos de enlaces y comentarios, especialmente en el área de <strong>Recursos Humanos</strong>. Aunque muchos de
-      esos enlaces ya no estén activos, lo valioso es que se conserva lo que los alumnos escribieron sobre ellos: resúmenes, impresiones, conexiones con sus
-      estudios. Es un archivo construido a lo largo de más de 25 años, que muestra cómo los estudiantes aprendieron y compartieron en un tiempo en que la
-      educación digital todavía se estaba inventando.</p>
+    <p>Over the years, EVAi accumulated a large database of links and comments, especially in the <strong>Human Resources</strong> area. Although many of
+      those links are no longer active, what is valuable is that what students wrote about them is preserved: summaries, impressions, connections with their
+      studies. It is an archive built over more than 25 years, showing how students learned and shared in a time when
+      digital education was still being invented.</p>
 
-      <p>Hoy, EVAi se puede recorrer en una <strong>versión demo</strong>. Se accede con permisos de superadministrador, pero sin posibilidad de guardar cambios, de modo que
-      cualquiera puede asomarse a su funcionamiento real sin alterar nada. Así permanece como memoria viva de una época en que lo digital se improvisaba con
-      ingenio, humor y mucha dedicación.</p>
- 
-    <p>Para preservar la privacidad, en la versión de demostración de EVAi se han modificado nombres, correos electrónicos y entradas de foros. 
-    Aun así, si apareciera algún dato personal no deseado, se retirará en futuras revisiones. 
-    Puedes comunicarlo en <a href="mailto:info@evaidemo.org">info@evaidemo.org</a>.</p>
+    <p>Today, EVAi can be explored in a <strong>demo version</strong>. It is accessed with superadministrator permissions, but without the ability to save changes, so that
+      anyone can look at how it really works without changing anything. It thus remains as a living memory of an era when the digital world was improvised with
+      ingenuity, humour and great dedication.</p>
 
-    
+    <p>To preserve privacy, names, email addresses and forum entries have been modified in the EVAi demo version.
+    Even so, if any unwanted personal data were to appear, it will be removed in future revisions.
+    You can report it at <a href="mailto:info@evaidemo.org">info@evaidemo.org</a>.</p>
+
+
 <div style="
   margin-top:40px;
   padding:20px 24px;
   border-radius:12px;
-  background:rgba(255, 255, 230, 0.9); /* tono amarillo suave translúcido */
+  background:rgba(255, 255, 230, 0.9);
   box-shadow:0 0 10px rgba(0,0,0,0.08);
   font-style:italic;
   text-align:center;
   color:#333;
 ">
-  <p>✨ <strong>EVAi</strong>, Entorno Virtual de Aprendizaje Interactivo.<br>
-  Nació entre foros y campanitas, creció entre risas y enlaces compartidos.<br>
-  Su fantasma sigue en línea, hablando con voz de Merlin y corrigiendo exámenes en la eternidad.</p>
+  <p>✨ <strong>EVAi</strong>, Interactive Virtual Learning Environment.<br>
+  Born among forums and little bells, it grew amid laughter and shared links.<br>
+  Its ghost is still online, speaking with Merlin's voice and marking exams for eternity.</p>
 </div>
-    
-    
+
+
   </div>
 
 </body>
