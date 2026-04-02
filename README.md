@@ -1,139 +1,139 @@
-# EVAi — Entorno Virtual de Aprendizaje Interactivo
+# EVAi — Interactive Virtual Learning Environment
 
-Plataforma educativa web desarrollada en PHP/MySQL. Permite gestión de alumnos, profesores, asignaturas, foros, chat, cuestionarios, notas, agenda y más.
+Web-based educational platform developed in PHP/MySQL. Supports management of students, teachers, subjects, forums, chat, quizzes, grades, calendar and more.
 
-Demo pública: [evaidemo.org](https://evaidemo.org)
+Public demo: [evaidemo.org](https://evaidemo.org)
 
 ---
 
-## Requisitos del servidor
+## Server Requirements
 
-| Componente | Versión mínima recomendada |
+| Component | Minimum recommended version |
 |---|---|
-| PHP | 7.4 o superior (recomendado 8.1+) |
-| MySQL / MariaDB | 5.7 / 10.3 o superior |
-| Apache | 2.4 con `mod_rewrite` habilitado |
-| Extensiones PHP | `mysqli`, `mbstring`, `curl`, `gd`, `zip`, `intl` |
+| PHP | 7.4 or higher (8.1+ recommended) |
+| MySQL / MariaDB | 5.7 / 10.3 or higher |
+| Apache | 2.4 with `mod_rewrite` enabled |
+| PHP Extensions | `mysqli`, `mbstring`, `curl`, `gd`, `zip`, `intl` |
 
-> Compatible con hosting compartido estándar (cPanel, Plesk, etc.)
+> Compatible with standard shared hosting (cPanel, Plesk, etc.)
 
 ---
 
-## Estructura de carpetas
+## Folder Structure
 
 ```
-evai/                        ← Raíz pública (DocumentRoot o subdirectorio)
+evai/                        ← Public root (DocumentRoot or subdirectory)
 │
-├── config.php               ← ⚠️ Configuración principal (NO subir con credenciales reales)
-├── index.php                ← Entrada: redirige a login
-├── login.php                ← Pantalla de acceso
-├── siempre.php              ← Bootstrap de sesión (incluido en todas las páginas)
+├── config.php               ← ⚠️ Main configuration (DO NOT upload with real credentials)
+├── index.php                ← Entry point: redirects to login
+├── login.php                ← Login screen
+├── siempre.php              ← Session bootstrap (included in all pages)
 │
-├── css/                     ← Estilos y temas de color
-├── js/                      ← JavaScript propio
-├── jqueryetc/               ← jQuery y plugins
-├── media/                   ← Imágenes, emoticonos, sonidos
-├── phpmailer/               ← Envío de correo (PHPMailer)
-├── lib/                     ← Librerías (QR code, etc.)
+├── css/                     ← Styles and color themes
+├── js/                      ← Custom JavaScript
+├── jqueryetc/               ← jQuery and plugins
+├── media/                   ← Images, emoticons, sounds
+├── phpmailer/               ← Mail sending (PHPMailer)
+├── lib/                     ← Libraries (QR code, etc.)
 │
-├── chat/                    ← Módulo de chat en tiempo real
-├── chatmini/                ← Chat simplificado
-├── cuest/                   ← Cuestionarios y evaluaciones
-├── pod/                     ← Panel de administración (podio)
-├── soloprof/                ← Herramientas exclusivas de profesores
-├── bancot/                  ← Banco de actividades
-├── clasedir/                ← Clase directa / videoconferencia
+├── chat/                    ← Real-time chat module
+├── chatmini/                ← Simplified chat
+├── cuest/                   ← Quizzes and assessments
+├── pod/                     ← Administration panel (podium)
+├── soloprof/                ← Teacher-only tools
+├── bancot/                  ← Activity bank
+├── clasedir/                ← Direct class / videoconference
 │
-└── tmp/                     ← Archivos temporales (debe tener permisos de escritura)
+└── tmp/                     ← Temporary files (must have write permissions)
 ```
 
-**Carpeta privada** (fuera del DocumentRoot, no accesible desde web):
+**Private folder** (outside DocumentRoot, not accessible from the web):
 ```
-/ruta/privada/evai/
+/private/path/evai/
 └── logs/
     └── php-error.log
 ```
 
 ---
 
-## Instalación paso a paso
+## Step-by-step Installation
 
-### 1. Subir los archivos
+### 1. Upload the files
 
-Sube el contenido de la carpeta `evai/` al servidor, dentro del DocumentRoot (o en un subdirectorio como `/evai0`).
+Upload the contents of the `evai/` folder to the server, inside the DocumentRoot (or in a subdirectory such as `/evai0`).
 
 ```bash
-# Ejemplo con FTP o scp
-scp -r evai/ usuario@servidor:/public_html/
+# Example with FTP or scp
+scp -r evai/ user@server:/public_html/
 ```
 
-### 2. Crear las bases de datos
+### 2. Create the databases
 
-EVAi usa **dos bases de datos** MySQL:
+EVAi uses **two MySQL databases**:
 
-- `evai` — datos principales (usuarios, asignaturas, notas, foros...)
-- `cuest` — cuestionarios y evaluaciones
+- `evai` — main data (users, subjects, grades, forums...)
+- `cuest` — quizzes and assessments
 
-Crea ambas desde phpMyAdmin o por línea de comandos:
+Create both from phpMyAdmin or via the command line:
 
 ```sql
-CREATE DATABASE nombre_evai CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE nombre_cuest CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE evai_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE cuest_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-Luego importa los ficheros `.sql` correspondientes:
+Then import the corresponding `.sql` files:
 
 ```bash
-mysql -u usuario -p nombre_evai  < evai.sql
-mysql -u usuario -p nombre_cuest < cuest.sql
+mysql -u user -p evai_name  < evai.sql
+mysql -u user -p cuest_name < cuest.sql
 ```
 
-### 3. Configurar `config.php`
+### 3. Configure `config.php`
 
-Copia el archivo de ejemplo y edítalo con tus datos:
+Copy the example file and edit it with your details:
 
 ```bash
 cp config.example.php config.php
 ```
 
-Edita los valores de tu entorno:
+Edit the values for your environment:
 
 ```php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'tu_usuario_mysql');
-define('DB_PASS', 'tu_contraseña');
-define('DB1', 'nombre_evai');
-define('DB2', 'nombre_cuest');
+define('DB_USER', 'your_mysql_user');
+define('DB_PASS', 'your_password');
+define('DB1', 'evai_name');
+define('DB2', 'cuest_name');
 
-define('APP_URL', '');        // Vacío si está en raíz. '/evai0' si está en subdirectorio
+define('APP_URL', '');        // Empty if at root. '/evai0' if in a subdirectory
 define('APP_DIR', __DIR__);
 define('BASE_DIR', $_SERVER['DOCUMENT_ROOT']);
-define('DATA_DIR', '/ruta/fuera/del/public_html/evai');  // Carpeta privada para logs
+define('DATA_DIR', '/path/outside/public_html/evai');  // Private folder for logs
 define('MEDIA_DIR', APP_DIR . '/media');
 define('MEDIA_URL', APP_URL . '/media');
 ```
 
-Para el correo (notificaciones, recuperación de contraseña):
+For mail (notifications, password recovery):
 
 ```php
 define('SMTP', 'smtp.gmail.com');
-define('USERNAME', 'tucuenta@gmail.com');
-define('PASSMAIL', 'tu_contraseña_de_aplicacion');  // Contraseña de app, no la de Gmail
+define('USERNAME', 'youraccount@gmail.com');
+define('PASSMAIL', 'your_app_password');  // App password, not your Gmail password
 define('SMTPSECURE', 'tls');
 define('PORT', '587');
 ```
 
-### 4. Crear la carpeta privada de datos
+### 4. Create the private data folder
 
-Esta carpeta debe estar fuera del DocumentRoot.
-Crea la estructura completa:
+This folder must be outside the DocumentRoot.
+Create the full structure:
 
 ```bash
-mkdir -p /ruta/privada/evai/{cursos,fotos,grupos,logos_asigna,logs,pod,temp,usuarios,vinculos}
-chmod 775 /ruta/privada/evai/*
+mkdir -p /private/path/evai/{cursos,fotos,grupos,logos_asigna,logs,pod,temp,usuarios,vinculos}
+chmod 775 /private/path/evai/*
 ```
 
-### 5. Permisos de escritura
+### 5. Write permissions
 
 ```bash
 chmod 775 tmp/
@@ -141,67 +141,67 @@ chmod 775 media/imag/
 chmod 775 perfil/
 ```
 
-### 6. Verificar la instalación
+### 6. Verify the installation
 
-Accede desde el navegador a tu dominio. Deberías ver la pantalla de login de EVAi.
+Open your browser and navigate to your domain. You should see the EVAi login screen.
 
-Si hay errores, revisa:
-- `config.php` — rutas y credenciales correctas
-- Los logs en `DATA_DIR/logs/php-error.log`
-
----
-
-## Primer acceso
-
-El usuario administrador inicial tiene `id = 1` en la tabla `usuarios`. Accede con las credenciales que vengan en el `.sql` de instalación y **cambia la contraseña inmediatamente**.
-
-EVAi te forzará a cambiarla si detecta que es una contraseña débil (123456, 12345678).
-
-Existe un **modo DEMO** (configurable en `config.php`) que permite explorar la plataforma sin modificar datos reales.
+If there are errors, check:
+- `config.php` — correct paths and credentials
+- The logs at `DATA_DIR/logs/php-error.log`
 
 ---
 
-## Configuración de Apache
+## First Access
 
-Si instalas en un subdirectorio, asegúrate de que `mod_rewrite` está activo:
+The initial administrator user has `id = 1` in the `usuarios` table. Log in with the credentials provided in the installation `.sql` file and **change the password immediately**.
+
+EVAi will force you to change it if it detects a weak password (123456, 12345678).
+
+There is a **DEMO mode** (configurable in `config.php`) that lets you explore the platform without modifying real data.
+
+---
+
+## Apache Configuration
+
+If you install in a subdirectory, make sure `mod_rewrite` is active:
 
 ```apache
-# En .htaccess o VirtualHost
+# In .htaccess or VirtualHost
 Options -Indexes
 AllowOverride All
 ```
 
-Para instalación en raíz del dominio no se requiere configuración adicional.
+No additional configuration is required for installation at the domain root.
 
 ---
 
-## Notas de seguridad
+## Security Notes
 
-- **`config.php` nunca debe subirse a GitHub con credenciales reales.** Añádelo al `.gitignore` y sube solo `config.example.php` con valores vacíos.
-- La carpeta `tmp/` contiene archivos temporales — considera limpiarla periódicamente.
-- La carpeta `pod/` es el panel de administración — protégela con acceso restringido por IP si es posible.
-- En producción: `display_errors = 0` en `config.php` (ya está así por defecto para el dominio de producción).
+- **`config.php` must never be pushed to GitHub with real credentials.** Add it to `.gitignore` and only upload `config.example.php` with empty values.
+- The `tmp/` folder contains temporary files — consider cleaning it periodically.
+- The `pod/` folder is the administration panel — protect it with IP-restricted access if possible.
+- In production: `display_errors = 0` in `config.php` (already set this way by default for the production domain).
 
 
 ---
 
-## Tecnologías utilizadas
+## Technologies Used
 
-- PHP 7.4+ con MySQLi
+- PHP 7.4+ with MySQLi
 - MySQL / MariaDB
 - Apache
 - jQuery + jQuery UI
 - PHPMailer
-- GeoIP (localización geográfica)
-- phpQRcode (generación de QR)
-- Jitsi (videoconferencia, integración externa)
+- GeoIP (geographic location)
+- phpQRcode (QR code generation)
+- Jitsi (videoconference, external integration)
 
 ---
 
-## Historia
+## History
 
-EVAi nació en el entorno universitario como plataforma de aprendizaje colaborativo. Este repositorio es su memoria: el código de una herramienta que se construyó con ilusión y que funcionó de verdad.
+EVAi was born in a university setting as a collaborative learning platform. This repository is its memory: the code of a tool built with passion that truly worked.
 
 ---
 
-*Licencia: ver `LICENSE.txt`*
+*License: see `LICENSE.txt`*
