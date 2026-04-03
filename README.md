@@ -200,6 +200,8 @@ No additional configuration is required for installation at the domain root.
 
 ## History
 
+EVAI was used at Universitat Jaume I (2000-2023). Academic reference: http://dx.doi.org/10.6035/Educacio.2014.18
+
 EVAi was born in a university setting as a collaborative learning platform. This repository is its memory: the code of a tool built with passion that truly worked.
 
 ---
