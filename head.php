@@ -92,4 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 </script>
 
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#b7b75e">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+
 </head>
