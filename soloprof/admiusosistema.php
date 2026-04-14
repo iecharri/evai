@@ -23,7 +23,7 @@ $d2a = $d2;
 $d1utc_str = usuautc1($d1, '');
 $d1utc = $d1utc_str[0] . ' ' . '00:00:00';
 
-$d2utc_str = usuautc1($d1, '');
+$d2utc_str = usuautc1($d2, '');
 $d2utc = $d2utc_str[0] . ' ' . '23:59:59';
 
 // --------------------------------------------------
