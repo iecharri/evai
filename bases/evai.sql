@@ -5439,7 +5439,7 @@ ALTER TABLE `asignatprof`
 -- AUTO_INCREMENT de la tabla `bancot1`
 --
 ALTER TABLE `bancot1`
-  MODIFY `bancoid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `bancoid` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `boletin`
@@ -5541,7 +5541,7 @@ ALTER TABLE `cuentas5`
 -- AUTO_INCREMENT de la tabla `enviospor`
 --
 ALTER TABLE `enviospor`
-  MODIFY `n` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `n` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ex_aulas`
@@ -5553,7 +5553,7 @@ ALTER TABLE `ex_aulas`
 -- AUTO_INCREMENT de la tabla `ex_examen`
 --
 ALTER TABLE `ex_examen`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `factrec`
@@ -5613,7 +5613,7 @@ ALTER TABLE `grupos`
 -- AUTO_INCREMENT de la tabla `gruposexpo`
 --
 ALTER TABLE `gruposexpo`
-  MODIFY `row_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `row_id` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `gruposexpotit`
@@ -5643,7 +5643,7 @@ ALTER TABLE `mailrec`
 -- AUTO_INCREMENT de la tabla `maquinas`
 --
 ALTER TABLE `maquinas`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `message`
@@ -5667,7 +5667,7 @@ ALTER TABLE `podpaneles`
 -- AUTO_INCREMENT de la tabla `pracenti`
 --
 ALTER TABLE `pracenti`
-  MODIFY `n` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `n` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `recurgen`
@@ -5691,7 +5691,7 @@ ALTER TABLE `social_fotos`
 -- AUTO_INCREMENT de la tabla `social_textos`
 --
 ALTER TABLE `social_textos`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tareas`
@@ -5709,7 +5709,7 @@ ALTER TABLE `usosistema`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239415;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `vconcepto`
