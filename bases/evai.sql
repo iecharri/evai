@@ -1107,8 +1107,11 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('callto1', 'Permitir al resto de usuarios iniciar llamadas multimedia', 'Permitir al resto de usuarios iniciar llamadas multimedia', 'Permitir al resto de usuarios iniciar llamadas multimedia'),
 ('noselec', 'No has seleccionado ninguna asignatura.<p>Para añadir otras asignaturas, borrar, etc, pincha en <selecasigna><span class=\'b\'>Gestión Asignaturas</span>', 'No has seleccionat cap assignatura.<p>Per a afegir altres assignatures, esborrar, etc, punxa en <selecasigna><span class=\'b\'>Gestió Assignatures</span>', 'No has seleccionado ninguna asignatura.<p>Para añadir otras asignaturas, borrar, etc, pincha en <selecasigna><span class=\'b\'>Gestión Asignaturas</span>'),
 ('admi1', '(Administrador: se listan todas las asignaturas)', '(Administrador: es llisten totes les assignatures)', '(Administrator: all subjects are listed)'),
-('aquideb', 'Aquí debajo verás tus estadísticas de vínculos. Los totales se actualizan cada vez que entras en <site>', 'Ací davall voràs les teues estadístiques de vincles. Els totals s´actualitzen cada vegada que entres en <site>', 'You can see your link statistics below. Totals are updated each time you enter in <site>'),
-('estascon', 'Estás conectado a <site> en la asignatura <asigna>', 'Estàs connectat a <site> en l´assignatura <asigna>', 'You are connected to <site> in subject <asigna>'),
+('aquideb', 'Tus estadísticas de vínculos:', 'Les teues estadístiques de vincles:', 'Your link statistics:\r\n'),
+('chatvisitas', 'chat para visitantes del perfil', 'xat per a visitants del perfil', 'chat for profile visitors\r\n'),
+('guardar', 'Guardar', 'Guardar', 'Save'),
+('nodisponible', 'No disponible', 'No disponible', 'Not available\r\n'),
+('estascon', 'Estás conectado a <site> en la asignatura', 'Estàs connectat a <site> en l´assignatura', 'You are connected to <site> in subject'),
 ('ultavi', 'Últimos avisos', 'Últims avisos', 'Last messages'),
 ('mas', 'más', 'més', 'more'),
 ('maila', 'Mail a Profesores', 'Mail a Professors', 'Mail to Teachers'),
@@ -1682,9 +1685,9 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('newuser', 'Nuevo usuario', 'Nou usuari', 'New user'),
 ('fichasactu', 'Nuevos usuarios o usuarios que han modificado su ficha últimamente', 'Nous usuaris o usuaries que han modificat la seua fitxa darrerament', 'New users or users who have modified their profile lately'),
 ('fichsemana', 'Ficha de la semana', 'Ficha de la semana', 'Profile of the week'),
-('olvido', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con los datos de tu cuenta.', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con los datos de tu cuenta.', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con los datos de tu cuenta.'),
-('olvidoenvio', 'Recibirás los datos de tu cuenta en: ', 'Recibirás los datos de tu cuenta en: ', 'Recibirás los datos de tu cuenta en: '),
-('olvidoasunto', 'Recordatorio de cuenta en <site>', 'Recordatorio de cuenta en <site>', 'Recordatorio de cuenta en <site>'),
+('olvido', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con un link de recuperación de contraseña.', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con un link de recuperación de contraseña.', 'Si has olvidado tu usuario y contraseña, introduce el email con el que te diste de alta y pulsa ENVIAR. Se te enviará un email a esa dirección con un link de recuperación de contraseña.'),
+('olvidoenvio', 'Recibirás el link de recuperacion de contraseña en: ', 'Recibirás el link de recuperacion de contraseña en: ', 'Recibirás el link de recuperacion de contraseña en: '),
+('olvidoasunto', 'Recuperación de contraseña <SITE>', 'Recuperación de contraseña <SITE>', 'Recuperación de contraseña <SITE>'),
 ('borrvotos', 'Borrar los votos a su ficha personal que han recibido los alumnos, entre las fechas (dd/mm/yyyy): ', 'Borrar los votos a su ficha personal que han recibido los alumnos, entre las fechas (dd/mm/yyyy): ', 'Borrar los votos a su ficha personal que han recibido los alumnos, entre las fechas (dd/mm/yyyy): '),
 ('fiadju', 'Fichero adjunto', 'Fichero adjunto', 'Attach'),
 ('vermail', 'Ver mail', 'Ver mail', 'See mail'),
@@ -1840,10 +1843,10 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('practext', 'Prácticas', 'Prácticas', 'Prácticas'),
 ('rec5sg', 'Recuento parcial cada 5 minutos', 'Recuento parcial cada 5 minutos', 'Recuento parcial  cada 5 minutos'),
 ('megusta', 'me gusta', 'me gusta', 'like'),
-('nomegusta', 'no me gusta', 'no me gusta', 'don\'t like'),
-('like1', 'me gusta', 'me gusta', 'like'),
-('like2', 'no me gusta', 'no me gusta', 'don\'t like');
+('nomegusta', 'no me gusta', 'no me gusta', 'don\'t like');
 INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
+('like1', 'me gusta', 'me gusta', 'like'),
+('like2', 'no me gusta', 'no me gusta', 'don\'t like'),
 ('social', 'social', 'social', 'social'),
 ('envimens1', 'Enviarle mensajes', 'Enviarle mensajes', 'send messages'),
 ('comparte', 'Comparte', 'Comparte', 'Share'),
@@ -1864,11 +1867,11 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('siguiendo', 'Siguiendo', 'Siguiendo', 'Following'),
 ('nuevo', '¡Nuevo!', '¡Nuevo!', 'New!'),
 ('miscalif', 'Mis califiaciones', 'Mis califiaciones', 'Mis califiaciones'),
-('evainews', 'Novedades EVAI', 'Novedades EVAI', 'EVAI news'),
+('evainews', 'Novedades <site>', 'Novedades <site>', '<site> news'),
 ('mensforovisi', 'Mensaje visible', 'Mensaje visible', 'Mensaje visible'),
 ('pacadem', 'Página Académica', 'Página Académica', 'Página Académica'),
 ('cambiarpass', 'Cambiar Contraseña', 'Cambiar Contraseña', 'Change Password'),
-('tipopasswd', 'Utiliza una contraseña de entre 8 y 15 caracteres. Éstos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) ', 'Utiliza una contraseña de entre 8 y 15 caracteres. Éstos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) ', 'Utiliza una contraseña de entre 8 y 15 caracteres. Éstos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) '),
+('tipopasswd', 'Utiliza una contraseña de entre 8 y 15 caracteres. Estos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) ', 'Utiliza una contraseña de entre 8 y 15 caracteres. Estos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) ', 'Utiliza una contraseña de entre 8 y 15 caracteres. Estos pueden ser letras minúsculas o mayúsculas, números y los caracteres punto (.), guión (-) o guión bajo (_) '),
 ('254chars', '255 caracteres...', '255 caracteres...', '255 characters...'),
 ('noborrf', 'No es posible borrar mensajes', 'No es posible borrar mensajes', 'No es posible borrar mensajes'),
 ('estoy1', 'cualquier texto junto a tu foto...', 'cualquier texto junto a tu foto...', 'any text with your photo...'),
@@ -1879,7 +1882,7 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('estoy', 'Estoy', 'Estoy', 'I am'),
 ('lista', 'Lista', 'Lista', 'List'),
 ('random', 'Orden aleatorio', 'Orden aleatorio', 'Random order'),
-('vidhome', 'inserta el código de un vídeo Youtube, Vimeo... y haz click en la flecha verde de abajo', 'inserta el código de un vídeo Youtube, Vimeo... y haz click en la flecha verde de abajo', 'insert the code a video Youtube, Vimeo ... and click the green arrow below'),
+('vidhome', 'inserta el código de un vídeo Youtube, Vimeo... y haz click en la flecha de abajo', 'inserta el código de un vídeo Youtube, Vimeo... y haz click en la flecha de abajo', 'insert the code a video Youtube, Vimeo ... and click the arrow below'),
 ('anotaciones', 'Anotaciones', 'Anotaciones', 'Annotations'),
 ('votactivi', 'Actividades propuestas', 'Actividades propuestas', 'Actividades propuestas'),
 ('votmateri', 'Materiales colgados', 'Materiales colgados', 'Materiales colgados'),
@@ -1890,8 +1893,8 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('parami', 'para mí', 'para mí', 'for me'),
 ('trabpers', 'Trabajos Personales', 'Trabajos Personales', 'Trabajos Personales'),
 ('anotacitxt', 'Opción sólo visible para ti. Ni el alumno ni otros profesores pueden ver las anotaciones que hagas sobre él. Puedes añadir todas las que quieras, se relacionarán por fecha de introducción. También en tu perfil puedes ver un listado de todas tus anotaciones. Click en el siguiente link', 'Opción sólo visible para ti. Ni el alumno ni otros profesores pueden ver las anotaciones que hagas sobre él. Puedes añadir todas las que quieras, se relacionarán por fecha de introducción. También en tu perfil puedes ver un listado de todas tus anotaciones. Click en el siguiente link', 'Opción sólo visible para ti. Ni el alumno ni otros profesores pueden ver las anotaciones que hagas sobre él. Puedes añadir todas las que quieras, se relacionarán por fecha de introducción. También en tu perfil puedes ver un listado de todas tus anotaciones. Click en el siguiente link'),
-('newsA', '<div><br></div>Gestión de Mensajes en http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div><div><span style=\"color: rgb(114, 114, 114);\">Modifica Novedades EVAI - Profesores haciendo click en el icono de teclado.</span><br></div><div><br></div>', '<div><br></div>Gestión de Mensajes en http://iidl.evai.net/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div>', '<div><br></div>Gestión de Mensajes en http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div><div>Modifica \"in situ\" el texto de EVAI novedades -Profesores haciendo click en el icono de teclado.</div><div><br></div>'),
-('newsP', '<div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos \"__\".</div><div><br></div>', '<div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos /\"__/\".', '<div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos \"__\".</div><div><br></div>'),
+('newsA', ' <div><br></div>Gestión de Mensajes en http://localhost/evai0/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://localhost/evai0/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div><div><span style=\"color: rgb(114, 114, 114);\">Modifica Novedades EVAI - Profesores haciendo click en el icono de teclado.</span><br></div><div><br></div>', '<div><br></div>Gestión de Mensajes en http://iidl.evai.net/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div>', '<div><br></div>Gestión de Mensajes en http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=14&nbsp;<div><br></div><div>Accede a todas las carpetas del EVAI desde http://www.humansite.net/soloprof/admin.php?op=3&amp;pest=13</div><div><br></div><div>Modifica \"in situ\" el texto de EVAI novedades -Profesores haciendo click en el icono de teclado.</div><div><br></div>'),
+('newsP', ' <div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos \"__\".</div><div><br></div>', '<div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos /\"__/\".', '<div><br></div>Upload de múltiples ficheros: En la carpeta personal de cualquier usuario y en las carpetas de recursos y grupos de trabajo.<div><br></div><div>Ocultar ficheros a la vista de los Alumnos precediendo el nombre del fichero por dos guiones bajos \"__\".</div><div><br></div>'),
 ('usunoval', 'Utiliza letras minúsculas, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres', 'Utiliza letras minúsculas, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres', 'Utiliza letras minúsculas, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres'),
 ('passnoval', 'Utiliza letras, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres', 'Utiliza letras, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres', 'Utiliza letras, números y/o caracteres . - _<br>\r\nEntre 8 y 15 caracteres'),
 ('nomnoval', 'Campo Nombre no válido', 'Campo Nombre no válido', 'Campo Nombre no válido'),
@@ -1903,7 +1906,20 @@ INSERT INTO `idioma` (`m`, `c`, `v`, `i`) VALUES
 ('otrosrecur', 'Otros Recursos', 'Otros Recursos', 'Otros Recursos'),
 ('profpanel', 'Iniciar EVAI siempre en edición Perfil', 'Iniciar EVAI siempre en edición Perfil', 'Iniciar EVAI siempre en edición Perfil'),
 ('errorupload', 'Error upload', 'Error upload', 'Error upload'),
-('subido', 'upload OK', 'upload OK', 'upload OK');
+('subido', 'upload OK', 'upload OK', 'upload OK'),
+('demo1', 'DEMO: No todas las funcionalidades están disponibles.', 'DEMO: No totes les funcionalitats estan disponibles.', 'DEMO: Not all features are available.'),
+('demo2', 'usuario: demo password: demo', 'usuari: demo password: demo', 'user: demo password: demo'),
+('evai', 'EVAI - Entorno Virtual de Aprendizaje Interactivo', '*EVAI - Entorn Virtual d\'Aprenentatge Interactiu', 'EVAI - Virtual Interactive Learning Environment'),
+('desactivado', 'Desactivado', 'Desactivat', 'Disabled'),
+('paleta', 'Elige tu paleta de color', 'Elige tu paleta de color', 'Choose your color palette\r\n'),
+('olvidomail', 'Hola.\r\n           Has solicitado cambiar tu contraseña en <SITE>.\r\n           Pulsa el siguiente enlace para establecer una nueva:\r\n           <LINK>\r\n           Este enlace caduca en 1 hora.\r\n\r\n           Si no has solicitado el cambio, ignora este mensaje.', 'Hola.\r\n           Has solicitado cambiar tu contraseña en <SITE>.\r\n           Pulsa el siguiente enlace para establecer una nueva:\r\n           <LINK>\r\n           Este enlace caduca en 1 hora.\r\n\r\n           Si no has solicitado el cambio, ignora este mensaje.', 'Hola.\r\n           Has solicitado cambiar tu contraseña en <SITE>.\r\n           Pulsa el siguiente enlace para establecer una nueva:\r\n           <LINK>\r\n           Este enlace caduca en 1 hora.\r\n\r\n           Si no has solicitado el cambio, ignora este mensaje.'),
+('cambiocontraok', 'Contraseña cambiada correctamente. Ahora puedes <a href=\'login.php\'>iniciar sesión</a>.', 'Contraseña cambiada correctamente. Ahora puedes <a href=\'login.php\'>iniciar sesión</a>.', 'Contraseña cambiada correctamente. Ahora puedes <a href=\'login.php\'>iniciar sesión</a>.'),
+('demologin1', 'Entra directamente en modo demostración, sin usuario ni contraseña:', 'Entra directament en mode demostració, sense usuari ni contrasenya:', 'Enter demo mode directly, without a username or password:'),
+('demologin2', 'O bien accede con tu usuario y contraseña:', 'O bé accedix amb el teu usuari i contrasenya:', 'Or sign in with your username and password:');
+
+--
+-- Índices para tablas volcadas
+--
 
 -- --------------------------------------------------------
 
