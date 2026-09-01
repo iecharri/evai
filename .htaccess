@@ -1,0 +1,6 @@
+# BEGIN WePanel
+RewriteEngine On
+# END WePanel
+DirectoryIndex index.html index.php
+
+AddType image/x-icon .ico
