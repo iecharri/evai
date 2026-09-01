@@ -12,18 +12,20 @@ defined('EVA_BOOTSTRAP') or exit('Acceso directo no permitido');
   <meta name="description" content="Acceso a EVAi, la plataforma educativa interactiva que permite aprendizaje colaborativo, seguimiento de alumnos y evaluación en línea.">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="shortcut icon" href="<?php echo MEDIA_URL; ?>/imag/favicon.ico" type="image/x-icon">
-	<link rel="canonical" href="https://evaidemo.org/" />
-
+  <link rel="canonical" href="<?= DOMINIO ?>/" />
+	
   <!-- Open Graph / WhatsApp / Twitter -->
   <meta property="og:type"         content="website">
-  <meta property="og:url"          content="https://evaidemo.org/">
+  <meta property="og:url" content="<?= DOMINIO ?>/">
+
   <meta property="og:title"        content="EVAi - Entorno Virtual de Aprendizaje Interactivo">
-  <meta property="og:description"  content="Plataforma educativa open source usada en universidad real durante 20 años. Explórala en modo demo.">
-  <meta property="og:image"        content="https://evaidemo.org/media/og-image.png">
+  <meta property="og:description"  content="Plataforma educativa open source usada en universidad real durante más de 20 años. Explórala en modo demo.">
+  <meta property="og:image" content="<?= DOMINIO ?>/media/og-image.png">
+  
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="EVAi - Entorno Virtual de Aprendizaje Interactivo">
-  <meta name="twitter:description" content="Plataforma educativa open source usada en universidad real durante 20 años. Explórala en modo demo.">
-  <meta name="twitter:image"       content="https://evaidemo.org/media/og-image.png">
+  <meta name="twitter:description" content="Plataforma educativa open source usada en universidad real durante más de 20 años. Explórala en modo demo.">
+  <meta name="twitter:image" content="<?= DOMINIO ?>/media/og-image.png">  
 
   <link rel="stylesheet" href='<?php echo APP_URL;?>/css/normalize.css'>
   <link rel="stylesheet" href='<?php echo APP_URL;?>/css/lateral.css'>
