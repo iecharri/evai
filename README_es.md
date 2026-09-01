@@ -2,7 +2,7 @@
 
 Plataforma educativa web desarrollada en PHP/MySQL. Permite gestión de alumnos, profesores, asignaturas, foros, chat, cuestionarios, notas, agenda y más.
 
-Demo pública: [evaidemo.org](https://evaidemo.org)
+Demo pública: [evai2.org](https://evai2.org)
 
 ---
 
@@ -200,7 +200,7 @@ Para instalación en raíz del dominio no se requiere configuración adicional.
 
 ## Historia
 
-EVAI se usó en la Universitat Jaume I (2000-2023). Referencia académica: http://dx.doi.org/10.6035/Educacio.2014.18
+EVAI se usó en la Universitat Jaume I (2000-2023). Referencia académica: https://doi.org/10.6035/Educacio.2014.18
 
 EVAi nació en el entorno universitario como plataforma de aprendizaje colaborativo. Este repositorio es su memoria: el código de una herramienta que se construyó con ilusión y que funcionó de verdad.
 
