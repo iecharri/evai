@@ -143,4 +143,3 @@ function comentayvota($id,$ilink,$votado) {
 	echo "</form>";	
 }
 
-?>

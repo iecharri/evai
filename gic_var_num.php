@@ -18,4 +18,3 @@ $temp = $ilink->query("SELECT COUNT(id) FROM vinculos WHERE usu_id = '".$_SESSIO
 $temp1 = $temp->fetch_array(MYSQLI_BOTH);
 $_SESSION['numvinc1'] = $temp1[0];
 $numvinc1 = $_SESSION['numvinc1'];
-?>

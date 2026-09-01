@@ -157,4 +157,3 @@ if ($bva AND $bva != "0000-00-00") {
 	$sql .= " AND fechacrea >= '$bva'";
 }
 
-?>

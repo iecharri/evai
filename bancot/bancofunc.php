@@ -263,4 +263,3 @@ function completado($bancoid,$tiempo,$ilink) {
 	return $ret;
 }
 
-?>

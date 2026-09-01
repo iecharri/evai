@@ -100,4 +100,3 @@ if ($siono == 1) {echo "<p></p>".i("acturealiz",$ilink);}
 if ($siono == 2) {echo "<p></p><span class='rojo b'>".i("tamanofichgr",$ilink)."</span> $tamanomax MB";}
 	
 }
-?>

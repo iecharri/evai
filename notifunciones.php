@@ -684,4 +684,3 @@ function calendariomini($calen,$q,$arraymes,$ilink) {?>
 
 <?php
 }
-?>

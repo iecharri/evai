@@ -45,4 +45,3 @@ setcookie(
     true                   // httponly
 );
 
-?>

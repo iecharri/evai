@@ -32,4 +32,3 @@ $fichphp = APP_URL . "/file.php?n=".base64_encode($dirini);
 
 require_once APP_DIR . "/explorernue.php";
 
-?>

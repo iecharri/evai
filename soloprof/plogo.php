@@ -116,4 +116,3 @@ function logo($dir,$asicurgru) {
 	closedir($dir1);
 }
 
-?>

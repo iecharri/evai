@@ -39,4 +39,3 @@ Podr&aacute; encontrar m&aacute;s detalles sobre la licencia en [<a href="https:
 
 <?php
 $ilink->close();
-?>

@@ -20,4 +20,3 @@ echo "<br> <input class='col-1' type='submit' name='banner' value=\">>\"></form>
 
 $ret = $atencion[0];
 
-?>

@@ -30,4 +30,3 @@ if ($num) {
 	$_SESSION['borr'] = 1;
 }
 
-?>

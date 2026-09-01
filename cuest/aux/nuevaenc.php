@@ -68,4 +68,3 @@ CREATE TABLE IF NOT EXISTS `".$nuevocuest."2` (
 
 if (!$ilink->query($sql)) {return;}
 
-?>

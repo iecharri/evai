@@ -166,4 +166,3 @@ function enviarxmail($tipo,$tit,$asigna,$curso,$grupo,$ilink) {
 
 }
 
-?>

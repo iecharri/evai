@@ -30,4 +30,3 @@ function banner($ilink) {
 	return $ban;
 
 }
-?>

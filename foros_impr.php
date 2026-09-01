@@ -32,5 +32,3 @@ while ($fila = $iresult->fetch_array(MYSQLI_BOTH)) {
 	echo "<div class='saltopagina'></div>";
 }
 
-?>
-

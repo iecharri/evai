@@ -21,6 +21,3 @@ if ($contenido != $_SESSION['cont']) {
 
 }
 
-?>
-
-

@@ -54,4 +54,3 @@ $_SESSION['gic'] = $gic[0];
 $_SESSION['gc'] = $fila1[0];
 $_SESSION['tipasig'] = $fila1[1];
 
-?>

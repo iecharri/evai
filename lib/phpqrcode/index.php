@@ -14,6 +14,3 @@ $matrixPointSize = 4;
 
 QRcode::png($_REQUEST['data'], $filename, $errorCorrectionLevel, $matrixPointSize, 2);
 
-?>
-
-    

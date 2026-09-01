@@ -149,4 +149,3 @@ function mensvisig($id,$ilink) {
 	$ilink->query("UPDATE forogrupos SET invisible=0 WHERE id='$id' LIMIT 1");
 }
 
-?>

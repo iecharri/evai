@@ -60,4 +60,3 @@ if ($result) {
 	<?php	
 }
 
-?>

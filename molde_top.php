@@ -122,4 +122,3 @@ if($script == "usuarios" OR $script == "ficha") {return;}
 	require_once APP_DIR . "/mandoadist.php";
 // --------------------------------------------------
 
-?>

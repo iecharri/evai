@@ -545,4 +545,3 @@ function fromto($asigna,$curso,$grupo,$ilink) {
 
 if(empty($d1utc) || empty($d2utc) || $d1utc == '0000-00-00' || $d2utc == '0000-00-00') {return 1;}
 
-?>

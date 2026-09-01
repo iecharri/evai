@@ -68,4 +68,3 @@ if (empty($_SESSION['paleta']) && empty($_COOKIE['paleta'])) {
 }
 
 
-?>

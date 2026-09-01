@@ -184,6 +184,3 @@ return $n;
 
 function quitabarra($x) {return stripslashes($x);}
 
-?>
-
-

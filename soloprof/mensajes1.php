@@ -43,4 +43,3 @@ if($exito) {
 	echo "ERROR";
 }
 
-?>

@@ -178,4 +178,3 @@ function editar($id,$ilink) {
 	return 2;
 }
 
-?>

@@ -65,4 +65,3 @@ if ($myrow[7] != 'v.spx' AND $temp) {
 	$ilink->query("UPDATE message set aviso = 1 WHERE parausuid = '$uid'");
 }
 	
-?>

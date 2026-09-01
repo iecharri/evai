@@ -27,4 +27,3 @@ echo "<br><input class='col-10' type='text' name='obs' value='".$fila['obs']."'>
 echo "<input type=hidden name=id value=".$id.">\n";
 echo "<input class='col-1' type='submit' value=\"".i("agvalid",$ilink)."\">"; 
 echo "</form>";
-?>

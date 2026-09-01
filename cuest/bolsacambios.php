@@ -22,4 +22,3 @@ if ($regmodif1 == 1) {
 	$regmodif1 = 0; //por que???
 }
 
-?>

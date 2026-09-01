@@ -51,4 +51,3 @@ require_once APP_DIR . '/recursos.php';
 
 $noponer = $solover = "";
 
-?>

@@ -533,4 +533,3 @@ function borrardir($dir,$ilink){
 	registrar($exito,"rmdir",$dir,'','','',$ilink);
 }
 
-?>

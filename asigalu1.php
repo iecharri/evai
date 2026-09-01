@@ -153,4 +153,3 @@ function anadir($usuid, $edcurasigru,$ilink) {
 
 }
 
-?>

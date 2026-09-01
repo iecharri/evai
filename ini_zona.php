@@ -78,4 +78,3 @@ if (empty($_COOKIE['zone']) || $_COOKIE['zone'] !== $zone) {
 
 // Listo: a partir de aquí tu código puede usar siempre $_SESSION['zone']
 // para convertir/mostrar fechas (los inserts/updates a BD siguen en UTC).
-?>

@@ -37,4 +37,3 @@ if ($_SESSION['auto'] > 4) {
 $array[] = "<a href='?$param&pest=8'>Foros</a>";
 $array[] = "<a href='ficha.php?$param'>".i("ver",$ilink)."</a>";
 
-?>

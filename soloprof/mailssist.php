@@ -105,6 +105,3 @@ while ($temp = $result->fetch_array(MYSQLI_BOTH)) {
 echo "<p></p>";
 pagina($numfilas,$conta,$numpag,i("mensajes",$ilink),$param,$ilink);
 
-?>
-
-

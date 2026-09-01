@@ -19,4 +19,3 @@ if ($_GET['y'] AND $_GET['filtroasign']) {
 	$grupo = strtoupper($_POST['grupo']);
 }
 
-?>

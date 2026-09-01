@@ -97,4 +97,3 @@ function listorla($result,$ilink) {
 
 }
 
-?>

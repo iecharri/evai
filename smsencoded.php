@@ -25,4 +25,3 @@ function encoded($ses)
  return $sesencoded;
 }
 
-?>

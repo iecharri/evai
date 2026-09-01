@@ -300,4 +300,3 @@ echo "<td class='col-01' title='Cr&eacute;ditos de Evaluaci&oacute;n'>CE</td>";
 echo "</tr>";
 }
 
-?>

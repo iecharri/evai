@@ -20,4 +20,3 @@ asigna = '".$_SESSION['asigna']."' AND curso = '".$_SESSION['curso']."' AND grup
 $ilink->query($sql);
 echo "<a href=\"javascript:llamarasincrono('asistencia2.php?fecha=$fecha&id=$id','v$id$fecha')\" class='nob'>*</a>";
 
-?>

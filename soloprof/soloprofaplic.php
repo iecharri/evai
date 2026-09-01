@@ -39,4 +39,3 @@ if ($apli == 2) {
 	require_once APP_DIR . "/soloprof/soloprofaplic2.php";
 }
 
-?>

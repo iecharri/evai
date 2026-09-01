@@ -90,4 +90,3 @@ if ($_GET['accion'] == 'anadir') {
 
 }
 
-?>

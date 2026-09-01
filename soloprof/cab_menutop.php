@@ -71,4 +71,3 @@ function cab($tit,$asigna,$curso,$grupo,$ilink) {
 	}	
 }
 
-?>

@@ -213,4 +213,3 @@ function guardarc($cuest,$ilink) {
 		
 }
 
-?>

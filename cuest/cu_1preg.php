@@ -107,4 +107,3 @@ echo "<div class='both'></div>";
 
 echo $espacio;
 
-?>

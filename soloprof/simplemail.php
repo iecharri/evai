@@ -167,5 +167,3 @@ echo "<form method='post' name='envio'>";
 	echo "</div>";
 echo "</form>";
 
-?>
-

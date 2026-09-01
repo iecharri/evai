@@ -9,4 +9,3 @@ if (isset($_POST['zone']) && in_array($_POST['zone'], timezone_identifiers_list(
     setcookie("zone", $_POST['zone'], time() + 60*60*24*365, "/");
 }
 
-?>

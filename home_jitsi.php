@@ -52,5 +52,3 @@ function vid_home($ilink) {
 	
 }
 
-?>
-

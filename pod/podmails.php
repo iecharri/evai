@@ -61,4 +61,3 @@ echo "<br>";
 echo "<div class='contiene'>";
 require_once APP_DIR . "/soloprof/soloprofmens.php";
 echo "</div>";
-?>

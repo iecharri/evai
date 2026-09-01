@@ -278,4 +278,3 @@ if ($accion == 'anaasgn') {
 	
 }
 
-?>

@@ -70,4 +70,3 @@ function registrar($exito,$accion,$dir1,$fich1,$dir2,$fich2,$ilink) {
 	
 }
 
-?>

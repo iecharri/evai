@@ -27,4 +27,3 @@ header("Content-Disposition: attachment; filename=\"$res[1]\"");
 
 print $contenido;
 
-?>

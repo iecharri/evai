@@ -28,4 +28,3 @@ function sesion($usuid, $id, $ilink) {
 	
 }
 
-?>

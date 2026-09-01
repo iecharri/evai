@@ -27,5 +27,3 @@ $texto = str_replace("<div></div>", "", $texto);
 $texto = str_replace("</div>", " </div>", $texto);	
 echo conhiper($texto);
 
-?>
-

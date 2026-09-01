@@ -135,4 +135,3 @@ function anotaciones($n,$cuest,$cu,$opc,$ilink) {
 
 }
 
-?>

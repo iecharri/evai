@@ -14,6 +14,3 @@ if(!$_SESSION['porleer']) {$_SESSION['porleer'] = 0;}
 
 echo "<a href='usuarios.php?us=m' class='porleer' title='unread' style='position:relative'>".$_SESSION['porleer']."</a>&nbsp;";
 
-?>
-
-

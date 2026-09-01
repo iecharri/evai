@@ -28,4 +28,3 @@ if ($apli == 1) {
 	require_once APP_DIR . "/soloprof/titaplic1.php";
 }
 
-?>

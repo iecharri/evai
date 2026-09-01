@@ -52,4 +52,3 @@ function copy_dir($origen,$destino)
    }
 }
 
-?>

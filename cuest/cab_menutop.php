@@ -40,6 +40,3 @@ echo "<div class='menu0'>";
 
 echo "</div>";
 
-?>
-
-

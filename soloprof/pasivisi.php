@@ -17,4 +17,3 @@ $ilink->query("UPDATE cursasigru SET visibleporalumnos = '$camb' WHERE $filtro")
 
 if ($visi[0]) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

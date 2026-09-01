@@ -18,6 +18,3 @@ $tit = "";
 require_once APP_DIR . "/busquedas_sql_grupo.php";
 require_once APP_DIR . "/links_resul.php";
 
-?>
-
-

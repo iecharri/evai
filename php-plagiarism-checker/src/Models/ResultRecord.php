@@ -26,4 +26,3 @@ class ResultRecord{
                 '<BR/><strong>EmbededComparison:</strong> ' . $this->EmbededComparison;
     }
 }
-?>

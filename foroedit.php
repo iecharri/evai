@@ -78,5 +78,3 @@ function foroedit1($ilink) {
 	}
 }
 
-?>
-

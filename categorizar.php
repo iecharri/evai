@@ -57,4 +57,3 @@ foreach($cat as $clave=>$valor){
 echo " <input class='col-1' name='categ' type='submit' value=' >> '>";
 echo "</form>";
 
-?>

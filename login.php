@@ -169,4 +169,3 @@ function sugerencias($admi,$ilink) {
 	echo "<a href='mailto:$admi'><span class='icon-mail2'></span>".i("gaciassuger",$ilink)."</a>";
 }
 
-?>

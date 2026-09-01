@@ -48,4 +48,3 @@ if (!empty($error)) echo "<p style='color:red'>$error</p>"; ?>
 
 require_once APP_DIR . '/molde_bott.php';
 
-?>

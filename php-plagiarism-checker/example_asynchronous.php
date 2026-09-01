@@ -142,4 +142,3 @@ curl_setopt($handle, CURLOPT_POSTFIELDS, $encodedData);
 curl_setopt($handle, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
 $result = curl_exec($handle);
-?>

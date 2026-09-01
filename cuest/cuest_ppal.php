@@ -68,4 +68,3 @@ if(!$envi) {
 	echo "</form>";	
 }
 	
-?>	

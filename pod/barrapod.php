@@ -68,4 +68,3 @@ switch($pest) {
 
 solapah($array1,$pest1,"navhsimple");
 
-?>

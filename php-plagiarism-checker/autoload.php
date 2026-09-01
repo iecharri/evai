@@ -13,4 +13,3 @@ include_once( __DIR__.'/src/Models/ResultRecord.php');
 include_once( __DIR__.'/src/Models/ErrorHandler.php');
 
 include_once( __DIR__.'/src/Helpers/Config.php');
-?>

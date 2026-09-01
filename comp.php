@@ -88,4 +88,3 @@ function pidecoment() {
 	echo "</form>";
 }
 
-?>

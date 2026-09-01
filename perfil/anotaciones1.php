@@ -37,4 +37,3 @@ function exten($fich) {
 	return $ext;
 }
 
-?>

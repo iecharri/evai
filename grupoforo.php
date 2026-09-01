@@ -337,4 +337,3 @@ function yaexiste1($comentario, $ilink) {
 
 }
 
-?>

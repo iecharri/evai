@@ -34,4 +34,3 @@ if (isset($_GET['zone'])) {
 
 http_response_code(400); // Falta parámetro zone
 
-?>

@@ -29,4 +29,3 @@ if($guardar == 1) {
 	require_once APP_DIR . '/cuest/cuest_noguardar.php';
 }
 
-?>

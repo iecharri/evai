@@ -5,4 +5,3 @@ class Products{
     const Education = 'education';
     const Websites = 'websites';
 }
-?>

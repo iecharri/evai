@@ -49,4 +49,3 @@ if ($_SESSION['auto'] == 10 AND $filtroarea) {
 	
 }
 
-?>

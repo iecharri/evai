@@ -243,4 +243,3 @@ function codigo($length = 4) {
 	
 }
 
-?>	

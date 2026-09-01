@@ -58,4 +58,3 @@ if (!is_dir($dirini."compartida/")){safe_mkdir($dirini."compartida/");}
 header('Location: home.php'); 
 exit;
 
-?>

@@ -103,4 +103,3 @@ echo "<p></p>Introducir la contrase&ntilde;a <input class='col-2' type='password
 echo "</form>";
 }
 
-?>

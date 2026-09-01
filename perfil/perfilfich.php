@@ -24,4 +24,3 @@ $res = $iresult->fetch_array(MYSQLI_BOTH);
 header("Content-Type: $res[1]");
 
 echo $res[0];   
-?>

@@ -59,4 +59,3 @@ if($script == "plazasext") {
 
 require_once APP_DIR . '/asigna_elegir.php';
 
-?>

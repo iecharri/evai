@@ -49,4 +49,3 @@ $dir64 = base64_encode('');  // raíz de DATA_DIR
 $url = APP_URL . "/ver_media.php?dir64=$dir64&f=" . urlencode("$cuest.csv");
 
 echo "<a href='$url'>Descargar $cuest.csv</a>";
-?>

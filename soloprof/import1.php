@@ -191,4 +191,3 @@ function recalcu($asigna,$curso,$grupo,$usuid,$conv,$formula,$ilink) {
 	$ilink->query($sql);
 }
 
-?>

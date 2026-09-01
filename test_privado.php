@@ -215,4 +215,3 @@ if (is_readable($archivo)) {
 } else {
     echo "⚠️ No se puede leer el archivo (permisos?).";
 }
-?>

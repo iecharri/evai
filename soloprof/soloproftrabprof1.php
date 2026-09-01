@@ -29,6 +29,3 @@ while ($filaprof = $resultprof->fetch_array(MYSQLI_BOTH)) {
 		
 }
 
-?>
-
-	

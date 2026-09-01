@@ -32,4 +32,3 @@ if ($fxm[0] == 2) {
 	echo i("si",$ilink);
 }
 
-?>

@@ -49,4 +49,3 @@ function implode_get() {
     return $output;
 }
 
-?>

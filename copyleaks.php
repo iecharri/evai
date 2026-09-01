@@ -15,4 +15,3 @@ include("php-plagiarism-checker/example_synchronous.php");
 
 echo "<p></p>";
 
-?>

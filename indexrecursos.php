@@ -186,4 +186,3 @@ if ($op == 10 AND $asigna) {
 
 require_once APP_DIR . "/molde_bott.php";
 
-?>

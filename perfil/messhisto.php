@@ -31,5 +31,3 @@ if ($result0->num_rows) {echo "<p></p><hr class='sty'>";}
 
 echo unmensa($sql0,'',$ilink,'');
 
-?>
-

@@ -26,4 +26,3 @@ if ($seg == 1) {
 	<span class='icon-star-empty' alt=\"".i("seguir",$ilink)."\"></span></a>";
 }
 
-?>

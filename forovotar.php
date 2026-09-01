@@ -76,5 +76,3 @@ function votos_foro($id,$num,$voto,$cantivot) {
 	if($cantivot) {echo "<br>$cantivot votos";}	
 }
 
-?>
-

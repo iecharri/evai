@@ -22,4 +22,3 @@ $ilink->query("UPDATE titcuradmi SET notispormail = '$camb' WHERE $filtro");
 
 if ($nxm[0] > 0) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

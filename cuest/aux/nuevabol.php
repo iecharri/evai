@@ -32,4 +32,3 @@ CREATE TABLE IF NOT EXISTS `".$bolsa."_` (
 
 if (!$ilink->query($sql)) {return;}
 
-?>

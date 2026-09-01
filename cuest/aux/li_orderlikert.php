@@ -24,4 +24,3 @@ foreach ($ids as $id) {
     $orden++;
 }
 
-?>

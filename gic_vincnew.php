@@ -410,4 +410,3 @@ function zipindex($fich) {
 
 }
 
-?>

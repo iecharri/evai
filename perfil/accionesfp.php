@@ -221,4 +221,3 @@ function thumbamigos($amigos,$tipo,$ilink) {
 	}
 }
 
-?>

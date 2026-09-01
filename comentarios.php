@@ -24,6 +24,3 @@ require_once APP_DIR . '/coment.php';
 
 require_once APP_DIR . '/molde_bott.php';
 
-?>
-
-

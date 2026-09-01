@@ -95,6 +95,3 @@ if ($pest == 8 AND $_SESSION['auto'] > 4) {
 	require_once APP_DIR . '/perfil/forosusu.php';
 }
 
-?>
-
-

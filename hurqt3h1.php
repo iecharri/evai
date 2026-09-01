@@ -95,4 +95,3 @@ function decoded($str)
   return $decoded;
 }//end of decoded function
 
-?>

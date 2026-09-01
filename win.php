@@ -37,4 +37,3 @@ function xclose($tit,$div) {
 }
 
 
-?>

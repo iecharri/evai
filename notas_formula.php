@@ -25,4 +25,3 @@ return array($test1, $preg1, $prac1, $eval1, $alu1, $pro1, $mintest1, $minpreg1,
 
 }
 
-?>

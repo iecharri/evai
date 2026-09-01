@@ -226,4 +226,3 @@ function formulibocu($fila,$libocu,$usuid,$ilink) {
 	echo "</form> &nbsp;";
 
 }
-?>

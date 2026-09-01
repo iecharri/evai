@@ -91,4 +91,3 @@ if($_POST['listar'] OR ($us != "m" AND $us != "b" AND !$_GET['usuid'])) {
 
 require_once APP_DIR . "/molde_bott.php";
 
-?>

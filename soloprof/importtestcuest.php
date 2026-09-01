@@ -12,6 +12,3 @@ $hide = 1; if ($_GET['imp'] OR $_GET['table'] OR $_GET['conv'] OR $_GET['imp']) 
 
 wintot1(APP_DIR . "/soloprof/import1.php",'','divp','Importar notas test de un cuestionario',$hide,$ilink);
 
-?>
-
-

@@ -21,4 +21,3 @@ if ($numvinculos AND !$_GET['id']) {
 	$tit .= ":</span><br>";
 }
 
-?>

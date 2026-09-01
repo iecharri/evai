@@ -32,4 +32,3 @@ function quitabarra($x) {return stripslashes($x);}
 function ponbarra($x) {return addslashes($x);}
 function nocomid($x) {return str_replace("\"","''",$x);}
 
-?>

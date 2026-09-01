@@ -308,4 +308,3 @@ function recordar(int $usuid, mysqli $ilink): void
     }
 }
 
-?>

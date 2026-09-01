@@ -162,4 +162,3 @@ if((!$ms OR $ms != $icono) AND $icono) {
 
 $ilink->query("UPDATE usuarios SET mesiento = '$mesiento' WHERE id = '".$_SESSION['usuid']."'");
 
-?>

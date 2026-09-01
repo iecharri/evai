@@ -54,4 +54,3 @@ while ($fila = $result->fetch_array(MYSQLI_BOTH)) {
 }
 function quitabarra($x) {return stripslashes($x);}
 
-?>

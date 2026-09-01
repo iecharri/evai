@@ -38,4 +38,3 @@ header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 31536000) . ' GMT');
 // --- salida del archivo ---
 readfile($path);
 exit;
-?>

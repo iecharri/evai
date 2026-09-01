@@ -45,4 +45,3 @@ if ($enchatusuid) {
 }
 
 require_once APP_DIR . '/molde_bott.php';
-?>

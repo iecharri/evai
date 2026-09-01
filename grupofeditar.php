@@ -51,4 +51,3 @@ echo "<div class='both rojo b mediana' id='esperar1' style='display:none'>$imglo
 
 echo "</form>";
 
-?>

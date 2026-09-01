@@ -444,4 +444,3 @@ function borruna($sala,$ilink) {
 	iconex(SITE,$ilink);
 }
 
-?>

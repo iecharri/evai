@@ -131,4 +131,3 @@ function verampli($plaza,$ilink) {
 
 }
 
-?>

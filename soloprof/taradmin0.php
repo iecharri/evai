@@ -40,4 +40,3 @@ $retbanner = wintot1("banner.php", '', 'divbanner','', $hidebanner,$ilink);
 $retidioma = wintot1("idioma.php", '', 'dividioma','', $hideidioma,$ilink);
 //$retsonido = wintot1("sonido.php", '', 'divsonido','', $hidesonido,$ilink);
 
-?>

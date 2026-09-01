@@ -168,6 +168,3 @@ echo "<div id='esperar' style='display:none'><p><br></p>";
 echo $imgloader.i("esperar",$ilink);
 echo "<p><br></p></div>";
 
-?>
-
-

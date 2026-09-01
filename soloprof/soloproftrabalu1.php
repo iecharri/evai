@@ -26,4 +26,3 @@ while ($filaalu = $resultalu->fetch_array(MYSQLI_BOTH)) {
 		
 }
 
-?>

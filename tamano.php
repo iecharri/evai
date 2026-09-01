@@ -184,4 +184,3 @@ function sanear_string($string)
     return $string;
 }
 
-?>

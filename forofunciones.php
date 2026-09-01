@@ -639,5 +639,3 @@ function yaexiste($comentario, $ilink) {
 
 }
 
-?>
-

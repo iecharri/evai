@@ -11,4 +11,3 @@ $ilink->query("DELETE FROM chatlista");
 
 echo "0";
 
-?>

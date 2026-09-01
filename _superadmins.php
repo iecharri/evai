@@ -27,4 +27,3 @@ function cargar_superadmins(mysqli $db): array {
     $_SESSION['superadmins_cache'] = $ids;
     return $ids;
 }
-?>

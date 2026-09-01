@@ -263,4 +263,3 @@ function anadiren($asignaext,$curso,$grupo,$usuid,$ilink) {
 
 }
 
-?>

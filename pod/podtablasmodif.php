@@ -526,4 +526,3 @@ function borrardir1($dir,$ilink){
 	safe_rmdir($dir);
 }
 
-?>

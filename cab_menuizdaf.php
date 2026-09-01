@@ -126,4 +126,3 @@ if ($_SESSION['auto'] <= $autorizado AND !$_SESSION['soy_superadmin']) {return;}
 if ($_SESSION['soy_superadmin'] AND $_SESSION['auto'] == 10) {return 1;} 
 
 }
-?>

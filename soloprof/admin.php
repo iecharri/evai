@@ -91,4 +91,3 @@ switch($op) {
 
 require_once APP_DIR . "/molde_bott.php";
 
-?>

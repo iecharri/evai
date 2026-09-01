@@ -199,4 +199,3 @@ function thumb($result,$ilink) {
 
 }
 
-?>

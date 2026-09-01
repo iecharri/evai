@@ -84,4 +84,3 @@ function unmensa($sql,$histot,$ilink,$x) {
 	
 }
 
-?>

@@ -301,4 +301,3 @@ function formu($ilink, $asigna, $curso, $grupo, $pest, $script) {
 	
 }
 
-?>

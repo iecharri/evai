@@ -31,4 +31,3 @@ header("Content-Disposition: attachment; filename=$fila[2]");
 
 print $contenido;
 
-?>

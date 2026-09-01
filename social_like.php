@@ -22,4 +22,3 @@ if ($clickar) {
 
 like($tabla,$id,$ilink,$clickar);
 
-?>

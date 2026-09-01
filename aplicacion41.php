@@ -45,7 +45,3 @@ if ($nuevos != $_SESSION['nuevos']) {
 	</script>
 	<?php
 }
-?>
-
-
-

@@ -181,4 +181,3 @@ if(!$disabled) {echo " <input class='col-2' type='submit' name='votprof' value='
 				
 echo "</form>";
 
-?>

@@ -80,5 +80,3 @@ if ($_SESSION['demo']) {
 	}
 }
 
-?>
-

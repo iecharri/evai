@@ -168,4 +168,3 @@ if ($titu) {echo "</table>";}
 
 }
 
-?>

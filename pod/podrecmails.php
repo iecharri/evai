@@ -192,6 +192,3 @@ while ($temp = $result->fetch_array(MYSQLI_BOTH)) {
 }
 echo "</tr></table>";
 
-?>
-
-

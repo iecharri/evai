@@ -44,5 +44,3 @@ function safe_fopen($filename, $mode, $use_include_path = false, $context = null
     return $context ? fopen($filename, $mode, $use_include_path, $context) : fopen($filename, $mode, $use_include_path);
 }
 
-?>
-

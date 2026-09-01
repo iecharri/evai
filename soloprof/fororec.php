@@ -27,4 +27,3 @@ echo " <input type='submit' value=' >> '></form><p></p>";
 
 $retfororec = $fecha[0];
 
-?>

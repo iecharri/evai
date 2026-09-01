@@ -102,4 +102,3 @@ echo "</div>";
 
 function quitabarra($x) {return stripslashes($x);}
 
-?>

@@ -297,4 +297,3 @@ pagina($numvinculos,$conta,$numpag,i("usuarios",$ilink),"ord=$ord&usua=$usua",$i
 
 require_once APP_DIR .  "/molde_bott.php";	
 
-?>

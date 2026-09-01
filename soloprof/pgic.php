@@ -19,4 +19,3 @@ $_SESSION['gic'] = $camb;
 
 if ($gic[0] > 0) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

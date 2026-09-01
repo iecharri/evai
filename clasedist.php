@@ -207,5 +207,3 @@ echo '<a href="javascript:llamarasincrono(\'jcclasedistfich.php?file='. rawurlen
 }
 
 
-?>
-

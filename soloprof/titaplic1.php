@@ -281,4 +281,3 @@ function selecthora($h) {
 	echo ">23:30</option>";
 }
 
-?>

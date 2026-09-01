@@ -67,4 +67,3 @@ if ($temp > 0) {
 	if ($_SESSION['tipo'] == 'A') {$ilink->query("UPDATE usuarios SET tipo = 'E' WHERE id = '$u'");}
 }
 
-?>

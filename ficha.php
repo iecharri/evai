@@ -258,5 +258,3 @@ if (!$result) { echo "Error SQL: " . $ilink->error; return; }
 	return;
 }
 
-?>
-

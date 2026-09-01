@@ -30,4 +30,3 @@ $ok[] = 'DATA_DIR = '.(defined('DATA_DIR') ? DATA_DIR : '(no definido)');
 header('Content-Type: text/plain; charset=utf-8');
 echo "OK:\n- ".implode("\n- ", $ok)."\n\n";
 echo $errs ? "ERRORES:\n- ".implode("\n- ", $errs)."\n" : "ERRORES: ninguno\n";
-?>

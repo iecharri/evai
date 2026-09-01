@@ -24,4 +24,3 @@ while ($fila = $result->fetch_array(MYSQLI_BOTH)) {
 echo "</select> <input class='col-10' type='submit' value=\">>\"></form>";
 $ret = $admi[0];
 
-?>

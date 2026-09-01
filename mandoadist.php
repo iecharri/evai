@@ -59,4 +59,3 @@ function variables($get) {
 	return $var;
 }
 
-?>

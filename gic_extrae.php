@@ -73,5 +73,3 @@ $sql = AddSlashes ($temp['description']);
 
 echo "<p></p>";
 
-?>
-

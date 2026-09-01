@@ -76,4 +76,3 @@ if ($n == 1) {
 	echo "<p></p>No hay correos para enviar";
 }
 
-?>

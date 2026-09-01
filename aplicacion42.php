@@ -24,4 +24,3 @@ while ($fila = $clicks->fetch_array(MYSQLI_BOTH)) {
 	echo "</div>";
 	echo "<p><br></p>";
 }
-?>

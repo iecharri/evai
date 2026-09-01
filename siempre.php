@@ -133,4 +133,3 @@ function must_change_password(mysqli $ilink, int $id): bool {
     return $debil_plain || $debil_hash;
 }
 
-?>

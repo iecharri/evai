@@ -70,4 +70,3 @@ function deldir($dir){
 	safe_rmdir(${dir});
 }
 
-?>

@@ -137,4 +137,3 @@ while ($fila = $result->fetch_array(MYSQLI_BOTH)) {
 }
 
 require_once APP_DIR .  "/molde_bott.php";
-?>

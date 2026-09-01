@@ -51,4 +51,3 @@ function tipotabla($tabla,$ilink) {
 	}
 	echo "</span> ";
 }
-?>

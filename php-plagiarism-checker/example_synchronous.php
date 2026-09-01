@@ -151,4 +151,3 @@ function build_table($array){
 if(isset($plist,$plist['response']) && count($plist['response'])>0)
 	echo build_table($plist['response']);
 
-?>

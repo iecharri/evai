@@ -98,4 +98,3 @@ foreach($orden as $indiceo => $cadaorden) {
 
 echo "<p class='txth b grande'>HECHO</p>";
 
-?>

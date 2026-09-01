@@ -41,4 +41,3 @@ for ($i=0; $i<=$num; $i++) {
 
 echo "<span class='txth b'> HECHO</span>";
 
-?>

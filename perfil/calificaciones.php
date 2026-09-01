@@ -170,4 +170,3 @@ function tiponota($nota,$aprobado,$ilink) {
 	return $mensaje;
 }
 
-?>

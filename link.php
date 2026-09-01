@@ -58,6 +58,10 @@ public function query(string $query, int $result_mode = MYSQLI_STORE_RESULT): my
 $ilink = new ConexionEvai(DB_HOST, DB_USER, DB_PASS, DB1);
 $ilink->query("SET time_zone = '+00:00'");
 
+if (defined('MYSQL_SQL_MODE')) {
+    $ilink->query("SET SESSION sql_mode = '" . MYSQL_SQL_MODE . "'");
+}
+
 // Seleccionar BD si está definida
 if (!empty(DB1)) {
     $ilink->select_db(DB1);

@@ -39,4 +39,3 @@ $$a = $sel;
 
 <?php
 if ($_SESSION['menusimple'] == 'p') {echo "&nbsp; <a href='index.php'>desconectar</a>";}
-?>

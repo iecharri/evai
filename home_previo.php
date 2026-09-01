@@ -50,4 +50,3 @@ function home_previo($id, $ilink) {
 		
 }
 
-?>

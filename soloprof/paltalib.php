@@ -17,4 +17,3 @@ $ilink->query("UPDATE cursasigru SET altalibre = '$camb' WHERE $filtro");
 
 if ($altalib[0]) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

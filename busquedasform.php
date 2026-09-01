@@ -10,5 +10,3 @@ if ($_GET['bus'] == 2) {require_once APP_DIR . '/busquedasform_avan.php';}
 
 if ($_GET['bus'] == 3) {require_once APP_DIR . '/busquedasform_alertas.php';}
 
-?>
-

@@ -80,4 +80,3 @@ function notas($conv,$fila,$f,$esprofesor,$target,$concoefi,$ilink) {
 
 }
 
-?>

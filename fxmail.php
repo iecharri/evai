@@ -197,4 +197,3 @@ function usu_enviar($tit, $prof, $fila) {
 	
 }
 
-?>

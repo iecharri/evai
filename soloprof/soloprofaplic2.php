@@ -512,4 +512,3 @@ function mandarmail($ilink) {
 	
 }
 
-?>

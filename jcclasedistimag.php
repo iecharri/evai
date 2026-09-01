@@ -36,6 +36,3 @@ if ($fname && is_file($absDir . $fname)) {
     echo "<p></p><div class='center mediana'>" . i("nopresen", $ilink) . "</div>";
 }
 
-?>
-
-

@@ -47,4 +47,3 @@ function totime($buffer)
 		return($buffer); 
 }
 
-?>

@@ -13,4 +13,3 @@ require_once APP_DIR . '/perfil/calificaciones.php';
 
 require_once APP_DIR . '/molde_bott.php';
 
-?>

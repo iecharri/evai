@@ -50,6 +50,8 @@ if ($host === 'localhost' || $host === '127.0.0.1') {
     return; exit;
 }
 
+define('MYSQL_SQL_MODE', 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION');
+
 define('DATA_URL', null);
 
 $logDir = DATA_DIR . '/logs';
@@ -88,4 +90,3 @@ function demo_enabled(): bool {
     }
     return !empty($_SESSION['demo_mode']);
 }
-?>

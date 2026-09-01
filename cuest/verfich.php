@@ -32,4 +32,3 @@ if (preg_match('/^video/',$mime)) {
 	echo $imagen;   
 }
 
-?>

@@ -16,4 +16,3 @@ foreach ($menus as $elem) {
 echo "</ul>";
 }
 
-?>

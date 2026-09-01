@@ -18,4 +18,3 @@ echo "<br><input type='submit' name='banner' value=\">>\"></form>";
 
 $ret = $atencion[0];
 
-?>

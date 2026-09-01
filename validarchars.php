@@ -80,4 +80,3 @@ function versidatosok($ilink,$script) {
 	}	
 }
 
-?>

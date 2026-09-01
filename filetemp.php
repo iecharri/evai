@@ -16,4 +16,3 @@ header("Content-type: application/force-download");
 header("Content-Disposition: attachment; filename=$fich");  
 header("Content-Length: $size");  
 readfile("$filename");  
-?>   

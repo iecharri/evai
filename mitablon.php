@@ -92,4 +92,3 @@ require_once APP_DIR . '/molde_bott.php';
 
 function quitabarra($x) {return stripslashes($x);}
 
-?>

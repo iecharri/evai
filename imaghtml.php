@@ -117,5 +117,3 @@ function imagenesHTML($archivo, $norepetidos = true)
     }
 }  
 
-?>
-

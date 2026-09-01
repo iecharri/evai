@@ -6,4 +6,3 @@ require_once APP_DIR . '/asigna_cambiar.php';
 
 $reviso = 1;
 
-?>

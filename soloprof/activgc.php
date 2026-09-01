@@ -17,4 +17,3 @@ $_SESSION['gc'] = $camb;
 
 if ($gc[0] > 0) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

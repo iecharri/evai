@@ -23,4 +23,3 @@ $ilink->query("UPDATE usuarios SET ip='$ip' WHERE id='$uid'");
 $_SESSION['tipo'] = $tipo;
 $_SESSION['numvinc1'] = $numvinc;
 
-?>

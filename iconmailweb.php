@@ -88,4 +88,3 @@ function logo($asicurgru) {
 	}
 }
 
-?>

@@ -34,4 +34,3 @@ require_once APP_DIR . '/exped.php';
 
 require_once APP_DIR .  "/molde_bott.php";
 
-?>

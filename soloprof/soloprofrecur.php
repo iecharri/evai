@@ -150,4 +150,3 @@ if ($accion == 'anadir') {
 require_once APP_DIR . "/ponerobject.php";
 require_once APP_DIR . "/recursos.php";
 
-?>

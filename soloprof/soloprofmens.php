@@ -219,5 +219,3 @@ function paso1($prefijopod,$script,$pest) {
 	echo "<div class='both'>&nbsp;</div>";
 }
 
-?>
-

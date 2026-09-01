@@ -23,7 +23,3 @@ if($_GET['file'] AND $_SESSION['auto'] > 4)
 		fclose($file);
 	}
 
-?>
-
-
-

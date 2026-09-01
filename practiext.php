@@ -172,4 +172,3 @@ if ($titu) {echo "</table>";}
 
 }
 
-?>

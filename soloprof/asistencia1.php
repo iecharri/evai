@@ -93,4 +93,3 @@ function asis($id,$sql1,$cf,$dia,$ilink) {
 	echo "</td>";
 }
 
-?>

@@ -18,5 +18,3 @@ if ($script == "ficha") {
 }
 require_once APP_DIR . '/estadis_alu.php';
 
-?>
-

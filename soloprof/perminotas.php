@@ -16,4 +16,3 @@ $ilink->query("UPDATE atencion SET vernotas = '$camb'");
 
 if ($notas[0]) {echo i("no",$ilink);} else {echo i("si",$ilink);}
 
-?>

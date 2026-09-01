@@ -40,4 +40,3 @@ if ($usuid != $_SESSION['usuid']) {
 
 }
 
-?>

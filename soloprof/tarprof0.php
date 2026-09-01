@@ -46,5 +46,3 @@ $retborrforo = wintot1("soloprof/pborrforo.php",'','divborrforo','',$hideborrfor
 $retbanner = wintot1("soloprof/pbanner.php",'','divbanner','',$hidebanner,$ilink);
 $retlogo = wintot1("soloprof/plogo.php",'','divlogo','',$hidelogo,$ilink);
 
-?>
-

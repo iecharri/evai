@@ -160,4 +160,3 @@ function vozlink(texto, idioma) {
 
 require_once APP_DIR .  "/molde_bott.php";
 
-?>

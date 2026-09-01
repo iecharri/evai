@@ -94,4 +94,3 @@ while ($fila = $result->fetch_array(MYSQLI_BOTH)) {
 		
 }
 
-?>	

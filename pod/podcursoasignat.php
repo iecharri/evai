@@ -569,4 +569,3 @@ function formatear($num) {
 	if (!$num OR $num ==0) {return "&nbsp;";}	
 	return number_format($num,2,'.','');	
 }
-?>

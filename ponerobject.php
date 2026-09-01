@@ -40,4 +40,3 @@ function poneryoutub(string $linkyout, int $maxPx = 480): string {
  
  
  
-?>

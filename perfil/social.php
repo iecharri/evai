@@ -324,4 +324,3 @@ function quitabarra($x) {return stripslashes($x);}
 
 
 
-?>

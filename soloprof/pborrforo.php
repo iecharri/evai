@@ -29,4 +29,3 @@ function delforo($asigna,$curso,$grupo,$ilink) {
 
 }
 
-?>

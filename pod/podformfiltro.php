@@ -271,4 +271,3 @@ if ($_SESSION['auto'] == 10 AND $pest != 15 AND strpos($_SERVER['PHP_SELF'],"pod
 	
 $filtrosql = "";
 
-?>

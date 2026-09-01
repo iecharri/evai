@@ -24,4 +24,3 @@ function i1($x,$i,$ilink) {  //se usa
 
 }
 
-?>

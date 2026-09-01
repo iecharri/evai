@@ -63,4 +63,3 @@ if(!$_GET['x'] AND !$_SESSION['usuid']) {
 
  header("Location: login.php");
 
-?>

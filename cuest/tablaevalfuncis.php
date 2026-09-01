@@ -132,4 +132,3 @@ function versilohehecho($cuest,$usuid,$cu,$ilink) {
 
 }
 
-?>

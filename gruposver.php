@@ -124,4 +124,3 @@ echo "<br>";
 
 pagina($numvinculos,$conta,$numpag,i("grupos1",$ilink),"ord=$ord&accion=$accion",$ilink);
 
-?>

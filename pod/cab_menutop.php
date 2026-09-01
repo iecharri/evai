@@ -21,4 +21,3 @@ echo "<a $a_asign href='pod.php?pest=8'><span class='icon-checkmark'></span> Asi
 
 echo "</div>";
 
-?>

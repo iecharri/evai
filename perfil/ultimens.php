@@ -32,4 +32,3 @@ if ($num0 > 0) {
 	echo "<div id='nohaymens'>".i("nomens",$ilink,$anch)."</div>";	
 }
 
-?>

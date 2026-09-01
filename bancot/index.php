@@ -48,4 +48,3 @@ pagina($numvinculos,$conta,$numpag,i("competencias",$ilink),"op=$op&apli=1",$ili
 
 //posibilidad de solicitar un tiempo 
 
-?>

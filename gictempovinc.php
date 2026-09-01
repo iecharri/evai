@@ -146,4 +146,3 @@ function crearwav($txt, $n) {
 	return $fich.".wav";	
 }
 
-?>

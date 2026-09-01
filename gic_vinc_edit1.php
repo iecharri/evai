@@ -106,4 +106,3 @@ function borrardir($dir){
 	safe_rmdir($dir);
 }
 
-?>

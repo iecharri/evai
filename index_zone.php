@@ -36,5 +36,3 @@ HTML;
 if (!empty($_SESSION['zone']) || !empty($_COOKIE['zone'])) {
     unset($_SESSION['zone_try']);
 }
-?>
-
